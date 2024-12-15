@@ -1,3 +1,6 @@
+// Next element
+import Link from "next/link";
+
 // Style
 import "./NavigationMenu.scss";
 
@@ -5,11 +8,21 @@ function NavigationMenu() {
   return (
     <nav className="navigation">
       <ul className="navigation__list">
-        <li>APPROCHES THÉRAPEUTIQUES</li>
-        <li>TÉMOIGNAGES</li>
-        <li>INFORMATIONS PRATIQUES</li>
-        <li>CONTACT</li>
-        <li>À PROPOS</li>
+        <li>
+          <Link href="therapeutic-approaches">APPROCHES THÉRAPEUTIQUES</Link>
+        </li>
+        <li>
+          <Link href="testimonials">TÉMOIGNAGES</Link>
+        </li>
+        <li>
+          <Link href="practical-information">INFORMATIONS PRATIQUES</Link>
+        </li>
+        <li>
+          <Link href="contact">CONTACT</Link>
+        </li>
+        <li>
+          <Link href="about">À PROPOS</Link>
+        </li>
       </ul>
     </nav>
   );
