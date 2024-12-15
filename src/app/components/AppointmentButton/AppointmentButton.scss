@@ -1,0 +1,18 @@
+@import "../../../assets/styles/Colors.scss";
+
+.appointment-button {
+  height: fit-content;
+  position: absolute;
+  right: 0;
+  background-color: $blue-color;
+  color: white;
+  border: none;
+  border-radius: 90px;
+  padding: 16px 24px;
+  font-weight: bold;
+  display: flex;
+  width: fit-content;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
