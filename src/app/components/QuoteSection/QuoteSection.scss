@@ -1,0 +1,19 @@
+@import "../../../../assets/styles/Colors.scss";
+@import "../../../../assets/styles/Fonts.scss";
+
+.quote-section {
+  height: 360px;
+  background-color: $grey-color;
+  margin-top: 64px;
+  padding: 0 176px;
+
+  &__paragraph {
+    font-family: "Playfair Display";
+    font-style: italic;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+  }
+}
