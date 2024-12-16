@@ -1,0 +1,24 @@
+@import "../../../../assets/styles/Colors.scss";
+
+.presentation-section {
+  display: flex;
+  align-items: center;
+  gap: 104px;
+  margin: 64px 176px 0 176px;
+
+  &__image {
+    background-color: black;
+    width: 440px;
+    height: 600px;
+  }
+
+  &__texts {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    &__title {
+      color: $khaki-color;
+    }
+  }
+}

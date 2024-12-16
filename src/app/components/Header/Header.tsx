@@ -17,7 +17,7 @@ function Header() {
             Relaxologue-Psychopraticienne
           </p>
         </div>
-        <AppointmentButton />
+        <AppointmentButton secondClassName="appointment-button__absolute-position" />
       </div>
 
       <NavigationMenu />
