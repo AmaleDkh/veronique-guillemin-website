@@ -1,0 +1,68 @@
+@import "../../../../assets/styles/Colors.scss";
+@import "../../../../assets/styles/Fonts.scss";
+
+.reviews-section {
+  margin-top: 64px;
+  padding: 0 176px;
+  height: 360px;
+  background-color: $grey-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__photo {
+      margin-bottom: 48px;
+      width: 136px;
+      height: 136px;
+      border-radius: 50%;
+      object-fit: cover;
+      background-color: white;
+    }
+
+    &__texts {
+      text-align: center;
+
+      &__name {
+        font-family: "Playfair Display";
+        font-weight: bold;
+        font-style: italic;
+        color: $khaki-color;
+      }
+
+      &__review {
+        position: relative;
+        &__sentence {
+          font-style: italic;
+
+          &__right-quotation-mark,
+          &__left-quotation-mark {
+            font-family: "Playfair Display";
+            font-size: 48px;
+            font-style: italic;
+            color: $ochre-color;
+          }
+
+          &__right-quotation-mark {
+            margin-right: 32px;
+          }
+
+          &__left-quotation-mark {
+            margin-left: 32px;
+          }
+        }
+      }
+    }
+  }
+
+  &__fa-angle-left,
+  &__fa-angle-right {
+    color: white;
+    width: 24px;
+    height: 24px;
+  }
+}

@@ -4,6 +4,7 @@ import LargeImageContainer from "./components/LargeImageContainer/LargeImageCont
 import PresentationSection from "./components/PresentationSection/PresentationSection";
 import QuoteSection from "./components/QuoteSection/QuoteSection";
 import ImageTextSection from "./components/ImageTextSection/ImageTextSection";
+import Reviews from "./components/Reviews/Reviews";
 
 // Style
 import "../../assets/styles/Global.scss";
@@ -15,6 +16,7 @@ export default function Home() {
       <PresentationSection />
       <QuoteSection />
       <ImageTextSection />
+      <Reviews />
     </Layout>
   );
 }
