@@ -1,0 +1,18 @@
+@import "../../../../assets/styles/Colors.scss";
+@import "../../../../assets/styles/Fonts.scss";
+
+.text-block {
+  &__title {
+    font-family: "Playfair Display";
+    color: $khaki-color;
+    margin-bottom: 16px;
+    font-size: 24px;
+  }
+
+  &__line {
+    width: 72px;
+    border: none;
+    border-bottom: 2px solid $ochre-color;
+    margin: 0 auto 16px auto;
+  }
+}

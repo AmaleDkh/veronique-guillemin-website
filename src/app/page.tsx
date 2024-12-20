@@ -5,6 +5,7 @@ import PresentationSection from "./components/PresentationSection/PresentationSe
 import QuoteSection from "./components/QuoteSection/QuoteSection";
 import ImageTextSection from "./components/ImageTextSection/ImageTextSection";
 import Reviews from "./components/Reviews/Reviews";
+import TextBlocksSection from "./components/TextBlocksSection/TextBlocksSection";
 
 // Style
 import "../../assets/styles/Global.scss";
@@ -17,6 +18,7 @@ export default function Home() {
       <QuoteSection />
       <ImageTextSection />
       <Reviews />
+      <TextBlocksSection />
     </Layout>
   );
 }
