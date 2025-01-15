@@ -22,7 +22,11 @@ function ImageTextSection() {
         </p>
       </div>
 
-      <Image src={Desert} alt="" className="presentation-section__image" />
+      <Image
+        src={Desert}
+        alt={"Un désert"}
+        className="presentation-section__image"
+      />
     </section>
   );
 }

@@ -1,5 +1,12 @@
+// Component
+import Layout from "../components/Layout/Layout";
+
 function About() {
-  return <div>About</div>;
+  return (
+    <Layout>
+      <div></div>
+    </Layout>
+  );
 }
 
 export default About;

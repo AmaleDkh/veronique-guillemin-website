@@ -8,7 +8,9 @@ import Desert from "../../../../assets/images/desert.png";
 import "./LargeImageContainer.scss";
 
 function LargeImageContainer() {
-  return <Image src={Desert} alt="" className="large-image-container" />;
+  return (
+    <Image src={Desert} alt="Un désert" className="large-image-container" />
+  );
 }
 
 export default LargeImageContainer;

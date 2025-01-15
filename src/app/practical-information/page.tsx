@@ -1,5 +1,12 @@
+// Component
+import Layout from "../components/Layout/Layout";
+
 function PracticalInformation() {
-  return <div>PracticalInformation</div>;
+  return (
+    <Layout>
+      <div></div>
+    </Layout>
+  );
 }
 
 export default PracticalInformation;
