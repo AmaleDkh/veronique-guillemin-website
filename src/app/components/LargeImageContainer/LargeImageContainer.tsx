@@ -2,14 +2,14 @@
 import Image from "next/image";
 
 // Image
-import Desert from "../../../../assets/images/desert.png";
+import Desert2 from "../../../../assets/images/Desert2.webp";
 
 // Style
 import "./LargeImageContainer.scss";
 
 function LargeImageContainer() {
   return (
-    <Image src={Desert} alt="Un désert" className="large-image-container" />
+    <Image src={Desert2} alt="Un désert" className="large-image-container" />
   );
 }
 

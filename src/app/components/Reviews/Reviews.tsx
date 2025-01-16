@@ -8,6 +8,9 @@ import "./Reviews.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
+// Image
+import Desert1 from "../../../../assets/images/Desert1.webp";
+
 function Reviews() {
   return (
     <section className="reviews-section">
@@ -16,7 +19,11 @@ function Reviews() {
         className="reviews-section__fa-angle-left"
       />
       <div className="reviews-section__content">
-        <Image src="" alt="" className="reviews-section__content__photo" />
+        <Image
+          src={Desert1}
+          alt="Rédacteur de l'avis"
+          className="reviews-section__content__photo"
+        />
         <div className="reviews-section__content__texts">
           <p className="reviews-section__content__texts__name">Lorem ipsum</p>
           <div className="reviews-section__content__texts__review">

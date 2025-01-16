@@ -3,17 +3,14 @@
 
 .reviews-section {
   margin-top: 124px;
-  padding: 0 176px;
-  height: 360px;
-  background-color: $grey-color;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: white;
 
   &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: $grey-color;
+    padding: 124px 176px;
 
     &__photo {
       margin-bottom: 48px;
@@ -29,9 +26,7 @@
 
       &__name {
         font-family: "Playfair Display";
-        font-weight: bold;
-        font-style: italic;
-        color: $khaki-color;
+        color: white;
       }
 
       &__review {
@@ -43,8 +38,6 @@
           &__left-quotation-mark {
             font-family: "Playfair Display";
             font-size: 48px;
-            font-style: italic;
-            color: $ochre-color;
           }
 
           &__right-quotation-mark {
@@ -61,7 +54,6 @@
 
   &__fa-angle-left,
   &__fa-angle-right {
-    color: white;
     width: 24px;
     height: 24px;
   }

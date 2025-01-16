@@ -2,7 +2,7 @@
 import Image from "next/image";
 
 // Image
-import Desert from "../../../../assets/images/desert.png";
+import Desert1 from "../../../../assets/images/Desert1.webp";
 
 function ImageTextSection() {
   return (
@@ -23,7 +23,7 @@ function ImageTextSection() {
       </div>
 
       <Image
-        src={Desert}
+        src={Desert1}
         alt={"Un désert"}
         className="presentation-section__image"
       />

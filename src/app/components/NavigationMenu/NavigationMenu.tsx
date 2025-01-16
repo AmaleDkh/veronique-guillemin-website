@@ -12,16 +12,16 @@ function NavigationMenu() {
           <Link href="therapeutic-approaches">APPROCHES THÉRAPEUTIQUES</Link>
         </li>
         <li>
-          <Link href="testimonials">TÉMOIGNAGES</Link>
-        </li>
-        <li>
           <Link href="practical-information">INFORMATIONS PRATIQUES</Link>
         </li>
         <li>
-          <Link href="contact">CONTACT</Link>
+          <Link href="testimonials">TÉMOIGNAGES</Link>
         </li>
         <li>
           <Link href="about">À PROPOS</Link>
+        </li>
+        <li>
+          <Link href="contact">CONTACT</Link>
         </li>
       </ul>
     </nav>
