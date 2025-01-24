@@ -1,0 +1,16 @@
+@import "../../../assets/styles/Colors.scss";
+
+.introduction {
+  color: $ochre-color;
+  margin: 0 120px;
+  width: -webkit-fill-available;
+  text-align: center;
+
+  &__title {
+    font-size: 40px;
+  }
+
+  &__profession {
+    font-size: 32px;
+  }
+}

@@ -1,6 +1,6 @@
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
-// Get all sections
+// Get all posts
 export const fetchPosts = async () => {
   try {
     const response = await fetch(`${apiUrl}/sections`);
@@ -13,6 +13,23 @@ export const fetchPosts = async () => {
     return posts;
   } catch (error) {
     console.error("Erreur lors de la récupération des posts", error);
+    throw error;
+  }
+};
+
+// Get all text and image sections
+export const fetchTextAndImageSections = async () => {
+  try {
+    const response = await fetch(`${apiUrl}/text_image_section`);
+
+    if (!response.ok) {
+      throw new Error("Erreur lors de la requête GET des sections");
+    }
+
+    const sections = await response.json();
+    return sections;
+  } catch (error) {
+    console.error("Erreur lors de la récupération des sections", error);
     throw error;
   }
 };

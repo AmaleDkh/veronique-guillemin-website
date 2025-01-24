@@ -5,15 +5,14 @@
   height: 360px;
   background-color: $grey-color;
   margin-top: 124px;
-  padding: 0 176px;
+  padding: 124px 120px;
+  color: white;
+  text-align: center;
 
   &__paragraph {
-    font-family: "Playfair Display";
-    font-style: italic;
-    color: white;
     display: flex;
     align-items: center;
-    text-align: center;
+
     height: 100%;
   }
 }

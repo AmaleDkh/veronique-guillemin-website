@@ -1,65 +1,59 @@
 "use client";
 
-// React elements
-import { useEffect, useState } from "react";
-
 // Components
 import Layout from "./components/Layout/Layout";
 import LargeImageContainer from "./components/LargeImageContainer/LargeImageContainer";
-import PresentationSection from "./components/PresentationSection/PresentationSection";
-import QuoteSection from "./components/QuoteSection/QuoteSection";
-import ImageTextSection from "./components/ImageTextSection/ImageTextSection";
+import BackgroundColorSection from "./components/BackgroundColorSection/BackgroundColorSection";
+import ImageAndTextSection from "./components/ImageAndTextSection/ImageAndTextSection";
 import Reviews from "./components/Reviews/Reviews";
 import TextBlocksSection from "./components/TextBlocksSection/TextBlocksSection";
-
-// API Call
-import { fetchPosts } from "../utils/api";
+import Introduction from "./Introduction/Introduction";
 
 // Style
 import "../../assets/styles/Global.scss";
 
-// Image
-import Desert1 from "../../assets/images/Desert1.webp";
-
-const stripHtml = (html: string) => {
-  const doc = new DOMParser().parseFromString(html, "text/html");
-  return doc.body.textContent || "";
-};
+// Custom hook
+import { useTextAndImageSectionData } from "@/hooks/useData";
 
 export default function Home() {
-  const [sections, setSections] = useState<any[]>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const sectionsList = await fetchPosts();
-
-        if (sectionsList) {
-          setSections(sectionsList);
-        }
-      } catch (error) {
-        console.error(
-          "Une erreur est survenue lors de la récupération des posts:",
-          error
-        );
-      }
-    };
-    fetchData();
-  }, []);
+  const { homePageFirstPartContent, homePageSecondPartContent } =
+    useTextAndImageSectionData();
 
   return (
     <Layout>
       <LargeImageContainer />
+
       <div className="content-below-image">
-        <PresentationSection
-          paragraph={stripHtml(sections[0]?.content.rendered)}
-          title={stripHtml(sections[0]?.title.rendered)}
-          imageSrc={Desert1}
-          imageAlt="Un désert"
+        <Introduction />
+
+        {homePageFirstPartContent && (
+          <ImageAndTextSection
+            title={homePageFirstPartContent.section_title}
+            paragraph={homePageFirstPartContent.section_paragraph}
+            image={homePageFirstPartContent.section_image}
+            marginVersion="no-margin-left"
+          />
+        )}
+
+        <BackgroundColorSection
+          title=""
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare lorem
+        nisi, at volutpat ligula dictum ac. Pellentesque placerat, ante non
+        dictum fringilla, mi velit scelerisque dui, sit amet cursus ligula eros
+        a sem."
         />
-        <QuoteSection />
-        <ImageTextSection />
+
+        {homePageSecondPartContent && (
+          <ImageAndTextSection
+            title={homePageSecondPartContent.section_title}
+            paragraph={homePageSecondPartContent.section_paragraph}
+            image={homePageSecondPartContent.section_image}
+            marginVersion="no-margin-right"
+          />
+        )}
+
         <Reviews />
+
         <TextBlocksSection />
       </div>
     </Layout>
