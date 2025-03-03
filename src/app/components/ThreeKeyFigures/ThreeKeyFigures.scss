@@ -1,0 +1,20 @@
+@import "../../../../assets/styles/Colors.scss";
+@import "../../../../assets/styles/Fonts.scss";
+
+.three-key-figures {
+  display: flex;
+  justify-content: space-between;
+  margin: 96px 104px;
+
+  &__block {
+    &__number {
+      color: $khaki-color;
+      font-size: 72px;
+    }
+
+    &__text {
+      text-align: center;
+      margin-top: 24px;
+    }
+  }
+}

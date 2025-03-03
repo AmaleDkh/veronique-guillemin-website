@@ -8,6 +8,7 @@ import ImageAndTextSection from "./components/ImageAndTextSection/ImageAndTextSe
 import Reviews from "./components/Reviews/Reviews";
 import TextBlocksSection from "./components/TextBlocksSection/TextBlocksSection";
 import Introduction from "./Introduction/Introduction";
+import ThreeKeyFigures from "./components/ThreeKeyFigures/ThreeKeyFigures";
 
 // Style
 import "../../assets/styles/Global.scss";
@@ -24,7 +25,9 @@ export default function Home() {
       <LargeImageContainer />
 
       <div className="content-below-image">
-        <Introduction />
+        {/* <Introduction /> */}
+
+        <ThreeKeyFigures />
 
         {homePageFirstPartContent && (
           <ImageAndTextSection
