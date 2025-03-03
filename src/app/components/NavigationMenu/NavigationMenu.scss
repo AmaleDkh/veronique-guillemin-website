@@ -4,4 +4,28 @@
     list-style-type: none;
     gap: 48px;
   }
+
+  &__practices {
+    list-style-type: none;
+    padding: 16px 0 0 0;
+    position: absolute;
+    top: 24px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: max-content;
+  }
+
+  &__list {
+    &__item {
+      position: relative;
+
+      &--therapeutic-approaches-items {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+    }
+  }
 }

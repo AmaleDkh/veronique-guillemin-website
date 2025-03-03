@@ -10,9 +10,9 @@ function Header() {
     <header className="header">
       <div className="header__first-block">
         <div className="header__principal-information">
-          <h1 className="header__principal-information__title">
+          <p className="header__principal-information__title">
             Véronique Guillemin
-          </h1>
+          </p>
           <p className="header__principal-information__profession">
             Relaxologue-Psychopraticienne
           </p>

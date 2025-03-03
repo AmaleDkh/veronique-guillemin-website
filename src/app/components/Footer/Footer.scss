@@ -5,4 +5,17 @@
   text-align: center;
   background-color: $khaki-color;
   color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  &__principal-information {
+    text-align: center;
+    width: 100%;
+
+    &__title {
+      margin-bottom: 8px;
+      font-size: 32px;
+    }
+  }
 }
