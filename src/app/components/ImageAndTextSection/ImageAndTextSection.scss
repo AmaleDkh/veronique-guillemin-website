@@ -10,24 +10,21 @@
     background-color: black;
     width: 440px;
     height: 600px;
+    object-fit: cover;
   }
 
   &__texts {
     display: flex;
     flex-direction: column;
     gap: 48px;
-
-    &__title {
-      color: $khaki-color;
-    }
   }
 }
 
 .no-margin-left {
-  margin: 96px 104px 0 104px;
+  margin: 64px 104px 0 104px;
   flex-direction: row-reverse;
 }
 
 .no-margin-right {
-  margin: 96px 104px 0 104px;
+  margin: 64px 104px 0 104px;
 }

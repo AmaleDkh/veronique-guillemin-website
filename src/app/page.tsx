@@ -15,6 +15,7 @@ import "../../assets/styles/Global.scss";
 
 // Custom hook
 import { useTextAndImageSectionData } from "@/hooks/useData";
+import LastSectionWithButton from "./components/LastSectionWithButton/LastSectionWithButton";
 
 export default function Home() {
   const { homePageFirstPartContent, homePageSecondPartContent } =
@@ -34,7 +35,7 @@ export default function Home() {
             title={homePageFirstPartContent.section_title}
             paragraph={homePageFirstPartContent.section_paragraph}
             image={homePageFirstPartContent.section_image}
-            marginVersion="no-margin-left"
+            marginVersion="no-margin-right"
           />
         )}
 
@@ -51,13 +52,19 @@ export default function Home() {
             title={homePageSecondPartContent.section_title}
             paragraph={homePageSecondPartContent.section_paragraph}
             image={homePageSecondPartContent.section_image}
-            marginVersion="no-margin-right"
+            marginVersion="no-margin-left"
           />
         )}
 
         <Reviews />
 
         <TextBlocksSection />
+
+        <LastSectionWithButton
+          title="Lorem ipsum dolor sit amet consectetur adipiscing elit."
+          paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          lastSectionWithButtonWithMarginTop=""
+        />
       </div>
     </Layout>
   );

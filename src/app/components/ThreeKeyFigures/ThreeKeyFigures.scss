@@ -4,11 +4,13 @@
 .three-key-figures {
   display: flex;
   justify-content: space-between;
-  margin: 96px 104px;
+  margin: 0 104px;
+  padding: 64px 104px;
+  background-color: $dark-blue-color;
 
   &__block {
+    color: white;
     &__number {
-      color: $khaki-color;
       font-size: 72px;
     }
 

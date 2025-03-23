@@ -2,8 +2,10 @@
 
 // Components
 import Layout from "../components/Layout/Layout";
+import PageIntroduction from "../components/PageIntroduction/PageIntroduction";
 import ImageAndTextSection from "../components/ImageAndTextSection/ImageAndTextSection";
 import BackgroundColorSection from "../components/BackgroundColorSection/BackgroundColorSection";
+import LastSectionWithButton from "../components/LastSectionWithButton/LastSectionWithButton";
 
 // Style
 import "../../../assets/styles/Global.scss";
@@ -22,6 +24,11 @@ function About() {
 
   return (
     <Layout>
+      <PageIntroduction
+        title="Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        introduction="Lorem ipsum dolor sit amet consectetur adipiscing elit."
+      />
+
       {aboutPageFirstPartContent && (
         <ImageAndTextSection
           title={aboutPageFirstPartContent.section_title}
@@ -64,6 +71,12 @@ function About() {
           marginVersion="no-margin-right"
         />
       )}
+
+      <LastSectionWithButton
+        title="Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        lastSectionWithButtonWithMarginTop=""
+      />
     </Layout>
   );
 }

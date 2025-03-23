@@ -16,13 +16,17 @@
   }
 
   &__principal-information {
+    color: $ochre-color;
     text-align: center;
     width: 100%;
 
     &__title {
       margin-bottom: 8px;
-      color: $ochre-color;
       font-size: 32px;
     }
+  }
+
+  &__other-pages {
+    margin-bottom: 64px;
   }
 }

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { StaticImageData } from "next/image";
 
 // Component
-import AppointmentButton from "../AppointmentButton/AppointmentButton";
+import Button from "../Button/Button";
 
 // Style
 import "./PresentationSection.scss";
@@ -31,7 +31,11 @@ function PresentationSection({
       <div className="presentation-section__texts">
         <h2 className="presentation-section__texts__title">{title}</h2>
         <p>{paragraph}</p>
-        <AppointmentButton secondClassName="appointment-button__center" />
+        <Button
+          link=""
+          text="Découvrir toutes les pratiques"
+          secondClassName="appointment-button__center"
+        />
       </div>
     </section>
   );

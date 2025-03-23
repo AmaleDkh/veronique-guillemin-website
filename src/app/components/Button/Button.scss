@@ -1,6 +1,6 @@
 @import "../../../../assets/styles/Colors.scss";
 
-.appointment-button {
+.button {
   height: fit-content;
   background-color: $blue-color;
   color: white;
@@ -16,6 +16,10 @@
   &__absolute-position {
     position: absolute;
     right: 0;
+  }
+
+  &__margin-top {
+    margin-top: 24px;
   }
 
   &__center {

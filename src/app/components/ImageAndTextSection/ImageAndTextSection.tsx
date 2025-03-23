@@ -4,6 +4,8 @@ import Image from "next/image";
 // Style
 import "./ImageAndTextSection.scss";
 
+import SectionTitle from "@/SectionTitle/SectionTitle";
+
 interface ImageAndTextSectionProps {
   title: string;
   paragraph: string;
@@ -20,7 +22,8 @@ function ImageAndTextSection({
   return (
     <section className={`image-and-text-section ${marginVersion}`}>
       <div className="image-and-text-section__texts">
-        <h2 className="image-and-text-section__texts__title">{title}</h2>
+        <SectionTitle title={title} />
+
         <p>{paragraph}</p>
       </div>
 

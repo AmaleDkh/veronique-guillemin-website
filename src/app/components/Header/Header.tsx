@@ -1,23 +1,34 @@
+"use client";
+
+// Next elements
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 // Components
-import AppointmentButton from "../AppointmentButton/AppointmentButton";
+import Button from "../Button/Button";
 import NavigationMenu from "../NavigationMenu/NavigationMenu";
 
 // Style
 import "./Header.scss";
 
 function Header() {
+  const pathname = usePathname();
   return (
-    <header className="header">
+    <header className={`header ${pathname !== "/" && "header__other-pages"} `}>
       <div className="header__first-block">
-        <div className="header__principal-information">
+        <Link className="header__principal-information" href="/">
           <p className="header__principal-information__title">
             Véronique Guillemin
           </p>
           <p className="header__principal-information__profession">
             Relaxologue-Psychopraticienne
           </p>
-        </div>
-        <AppointmentButton secondClassName="appointment-button__absolute-position" />
+        </Link>
+        <Button
+          link=""
+          text="PRENDRE RENDEZ-VOUS"
+          secondClassName="button__absolute-position"
+        />
       </div>
 
       <NavigationMenu />

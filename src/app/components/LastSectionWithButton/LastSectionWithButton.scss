@@ -1,0 +1,18 @@
+@import "../../../../assets/styles/Colors.scss";
+
+.last-section-with-button {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 0 104px 64px 104px;
+  width: fit-content;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
