@@ -1,31 +1,47 @@
 // Components
-import SectionTitle from "@/SectionTitle/SectionTitle";
+import SectionTitle from "../SectionTitle/SectionTitle";
 import Button from "../Button/Button";
 
 // Style
 import "./LastSectionWithButton.scss";
 
-type LastSectionWithButtonProps = {
+interface LastSectionWithButtonProps {
   title: string;
-  paragraph: string;
-  lastSectionWithButtonWithMarginTop: string;
-};
+  description: string;
+  backgroundImage?: string;
+  isWhiteBackground?: boolean;
+}
 
 function LastSectionWithButton({
   title,
-  paragraph,
+  description,
+  backgroundImage,
+  isWhiteBackground = false,
 }: LastSectionWithButtonProps) {
-  return (
-    <section className="last-section-with-button">
-      <SectionTitle title={title} />
+  const containerClassName = `last-section-with-button__container ${
+    isWhiteBackground
+      ? "last-section-with-button__container--white"
+      : backgroundImage
+      ? "last-section-with-button__container--with-image"
+      : ""
+  }`;
 
-      <div className="last-section-with-button__text">
-        <p className="last-section-with-button__text__subtitle">{paragraph}</p>
+  return (
+    <section
+      className={containerClassName}
+      data-bg-image={backgroundImage ? backgroundImage : undefined}
+    >
+      <div className="last-section-with-button__content">
+        <SectionTitle title={title} />
+        <p className="last-section-with-button__description">{description}</p>
 
         <Button
-          text="PRENDRE RENDEZ-VOUS"
-          link=""
-          secondClassName="button__margin-top"
+          text="Prendre rendez-vous"
+          link="/contact"
+          marginTopVersion=""
+          mobileVersion=""
+          centerVersion="button--center-version"
+          colorVersion=""
         />
       </div>
     </section>

@@ -1,4 +1,4 @@
-@import "../../../../assets/styles/Colors.scss";
+@use "../../../../assets/styles/Colors.scss" as colors;
 
 .presentation-section {
   display: flex;
@@ -18,7 +18,7 @@
     gap: 48px;
 
     &__title {
-      color: $khaki-color;
+      color: colors.$khaki-color;
     }
   }
 }

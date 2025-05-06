@@ -33,3 +33,57 @@ export const fetchTextAndImageSections = async () => {
     throw error;
   }
 };
+
+// Get homepage content
+export const fetchHomepageContent = async () => {
+  try {
+    const response = await fetch(`${apiUrl}/homepage`);
+
+    if (!response.ok) {
+      throw new Error("Erreur lors de la requête GET de la page");
+    }
+
+    const page = await response.json();
+
+    return page;
+  } catch (error) {
+    console.error("Erreur lors de la récupération de la page", error);
+    throw error;
+  }
+};
+
+// Get about page content
+export const fetchAboutPageContent = async () => {
+  try {
+    const response = await fetch(`${apiUrl}/aboutpage`);
+
+    if (!response.ok) {
+      throw new Error("Erreur lors de la requête GET de la page");
+    }
+
+    const page = await response.json();
+
+    return page;
+  } catch (error) {
+    console.error("Erreur lors de la récupération de la page", error);
+    throw error;
+  }
+};
+
+// Get about page content
+export const fetchContactPageContent = async () => {
+  try {
+    const response = await fetch(`${apiUrl}/contactpage`);
+
+    if (!response.ok) {
+      throw new Error("Erreur lors de la requête GET de la page");
+    }
+
+    const page = await response.json();
+
+    return page;
+  } catch (error) {
+    console.error("Erreur lors de la récupération de la page", error);
+    throw error;
+  }
+};

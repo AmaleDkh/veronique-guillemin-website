@@ -1,9 +1,8 @@
-@import "../../../../assets/styles/Colors.scss";
-@import "../../../../assets/styles/Fonts.scss";
+@use "../../../../assets/styles/Colors.scss" as colors;
+@use "../../../../assets/styles/Fonts.scss";
 
 .quote-section {
-  height: 360px;
-  background-color: $grey-color;
+  background-color: colors.$grey-color;
   margin: 64px 104px 0 104px;
   padding: 40px 104px;
   color: white;
@@ -12,6 +11,5 @@
   &__paragraph {
     display: flex;
     align-items: center;
-    height: 100%;
   }
 }

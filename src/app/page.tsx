@@ -2,69 +2,109 @@
 
 // Components
 import Layout from "./components/Layout/Layout";
-import LargeImageContainer from "./components/LargeImageContainer/LargeImageContainer";
+import HeroBanner from "./components/HeroBanner/HeroBanner";
 import BackgroundColorSection from "./components/BackgroundColorSection/BackgroundColorSection";
 import ImageAndTextSection from "./components/ImageAndTextSection/ImageAndTextSection";
 import Reviews from "./components/Reviews/Reviews";
-import TextBlocksSection from "./components/TextBlocksSection/TextBlocksSection";
-import Introduction from "./Introduction/Introduction";
+// import TextBlocksSection from "./components/TextBlocksSection/TextBlocksSection";s
+// import Introduction from "./Introduction/Introduction";
 import ThreeKeyFigures from "./components/ThreeKeyFigures/ThreeKeyFigures";
+import LastSectionWithButton from "./components/LastSectionWithButton/LastSectionWithButton";
 
 // Style
 import "../../assets/styles/Global.scss";
 
+// Image
+import Desert2 from "../../assets/images/Desert2.webp";
+
 // Custom hook
-import { useTextAndImageSectionData } from "@/hooks/useData";
-import LastSectionWithButton from "./components/LastSectionWithButton/LastSectionWithButton";
+import { useHomepageData } from "@/hooks/useData";
 
 export default function Home() {
-  const { homePageFirstPartContent, homePageSecondPartContent } =
-    useTextAndImageSectionData();
+  const homepageContent = useHomepageData();
 
   return (
     <Layout>
-      <LargeImageContainer />
+      <HeroBanner
+        backgroundImage={Desert2}
+        title="Reconnectez-vous à vous-même"
+        description="Grâce à une approche thérapeutique bienveillante, retrouvez un équilibre émotionnel et mental."
+      />
 
       <div className="content-below-image">
         {/* <Introduction /> */}
 
         <ThreeKeyFigures />
 
-        {homePageFirstPartContent && (
-          <ImageAndTextSection
-            title={homePageFirstPartContent.section_title}
-            paragraph={homePageFirstPartContent.section_paragraph}
-            image={homePageFirstPartContent.section_image}
-            marginVersion="no-margin-right"
-          />
+        {homepageContent?.[0] && (
+          <>
+            <ImageAndTextSection
+              sectionTitle={homepageContent[0].first_section_title}
+              description={homepageContent[0].first_section_paragraph}
+              imageSrc={homepageContent[0].first_section_image}
+              imageAlt=""
+              imageOnLeft={true}
+              button={true}
+            />
+
+            {/* <TextBlocksSection
+              title={homepageContent[0].values_section_title}
+              firstTitle={homepageContent[0].values_section_first_value_title}
+              firstParagraph={
+                homepageContent[0].values_section_first_value_paragraph
+              }
+              secondTitle={homepageContent[0].values_section_second_value_title}
+              secondParagraph={
+                homepageContent[0].values_section_second_value_paragraph
+              }
+              thirdTitle={homepageContent[0].values_section_third_value_title}
+              thirdParagraph={
+                homepageContent[0].values_section_third_value_paragraph
+              }
+            /> */}
+
+            <ImageAndTextSection
+              sectionTitle={homepageContent[0].second_section_title}
+              description={homepageContent[0].second_section_paragraph}
+              imageSrc={homepageContent[0].second_section_paragraph}
+              imageAlt=""
+              backgroundColor="dark-blue"
+              titleColorVersion="white"
+            />
+
+            <BackgroundColorSection
+              title=""
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare lorem
+              nisi, at volutpat ligula dictum ac. Pellentesque placerat, ante non
+              dictum fringilla, mi velit scelerisque dui, sit amet cursus ligula eros
+              a sem."
+            />
+
+            <ImageAndTextSection
+              sectionTitle={homepageContent[0].benefits_section_title}
+              description={homepageContent[0].benefits_section_paragraph}
+              imageSrc=""
+              imageAlt=""
+              imageOnLeft={true}
+            />
+
+            <Reviews />
+
+            <ImageAndTextSection
+              sectionTitle={homepageContent[0].third_section_title}
+              description={homepageContent[0].third_section_paragraph}
+              imageSrc={homepageContent[0].second_section_paragraph}
+              imageAlt=""
+              backgroundColor="ochre"
+              titleColorVersion="white"
+            />
+
+            <LastSectionWithButton
+              title={homepageContent[0].last_section_button_title}
+              description={homepageContent[0].last_section_button_introduction}
+            />
+          </>
         )}
-
-        <BackgroundColorSection
-          title=""
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare lorem
-        nisi, at volutpat ligula dictum ac. Pellentesque placerat, ante non
-        dictum fringilla, mi velit scelerisque dui, sit amet cursus ligula eros
-        a sem."
-        />
-
-        {homePageSecondPartContent && (
-          <ImageAndTextSection
-            title={homePageSecondPartContent.section_title}
-            paragraph={homePageSecondPartContent.section_paragraph}
-            image={homePageSecondPartContent.section_image}
-            marginVersion="no-margin-left"
-          />
-        )}
-
-        <Reviews />
-
-        <TextBlocksSection />
-
-        <LastSectionWithButton
-          title="Lorem ipsum dolor sit amet consectetur adipiscing elit."
-          paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          lastSectionWithButtonWithMarginTop=""
-        />
       </div>
     </Layout>
   );

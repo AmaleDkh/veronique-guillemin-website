@@ -31,10 +31,14 @@ function PresentationSection({
       <div className="presentation-section__texts">
         <h2 className="presentation-section__texts__title">{title}</h2>
         <p>{paragraph}</p>
+
         <Button
-          link=""
+          link="/"
           text="Découvrir toutes les pratiques"
-          secondClassName="appointment-button__center"
+          marginTopVersion=""
+          mobileVersion=""
+          centerVersion="button--center-version"
+          colorVersion=""
         />
       </div>
     </section>

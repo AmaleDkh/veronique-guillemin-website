@@ -1,15 +1,16 @@
-@import "../../../../assets/styles/Colors.scss";
-@import "../../../../assets/styles/Fonts.scss";
+@use "../../../../assets/styles/Colors.scss" as colors;
+@use "../../../../assets/styles/Fonts.scss";
 
 .three-key-figures {
   display: flex;
   justify-content: space-between;
-  margin: 0 104px;
+  margin: 0;
   padding: 64px 104px;
-  background-color: $dark-blue-color;
+  background-color: colors.$khaki-color;
 
   &__block {
     color: white;
+
     &__number {
       font-size: 72px;
     }

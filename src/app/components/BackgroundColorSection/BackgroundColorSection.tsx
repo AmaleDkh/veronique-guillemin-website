@@ -1,3 +1,6 @@
+// Component
+import SectionTitle from "@/app/components/SectionTitle/SectionTitle";
+
 // Style
 import "./BackgroundColorSection.scss";
 
@@ -9,7 +12,7 @@ interface BackgroundColorSectionProps {
 function BackgroundColorSection({ title, text }: BackgroundColorSectionProps) {
   return (
     <section className="quote-section">
-      <h3>{title}</h3>
+      <SectionTitle title={title} />
       <p className="quote-section__paragraph">{text}</p>
     </section>
   );

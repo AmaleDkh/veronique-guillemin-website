@@ -3,6 +3,9 @@ import Layout from "../components/Layout/Layout";
 import PageIntroduction from "../components/PageIntroduction/PageIntroduction";
 import LastSectionWithButton from "../components/LastSectionWithButton/LastSectionWithButton";
 
+// Style
+import "../../../assets/styles/Global.scss";
+
 function TherapeuticApproaches() {
   return (
     <Layout>
@@ -13,8 +16,7 @@ function TherapeuticApproaches() {
 
       <LastSectionWithButton
         title="Lorem ipsum dolor sit amet consectetur adipiscing elit."
-        paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        lastSectionWithButtonWithMarginTop=""
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       />
     </Layout>
   );

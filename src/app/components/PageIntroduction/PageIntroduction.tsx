@@ -10,7 +10,7 @@ function PageIntroduction({ title, introduction }: MyComponentProps) {
   return (
     <div className="page-introduction">
       <h1>{title}</h1>
-      <p>{introduction}</p>
+      {/* <p>{introduction}</p> */}
     </div>
   );
 }

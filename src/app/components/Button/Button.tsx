@@ -4,15 +4,28 @@ import Link from "next/link";
 // Style
 import "./Button.scss";
 
-interface MyComponentProps {
-  link: string;
+interface ButtonProps {
   text: string;
-  secondClassName: React.ReactNode;
+  link: string;
+  marginTopVersion: string;
+  mobileVersion: string;
+  centerVersion: string;
+  colorVersion: string;
 }
 
-function Button({ link, text, secondClassName }: MyComponentProps) {
+function Button({
+  text,
+  link,
+  marginTopVersion,
+  mobileVersion,
+  centerVersion,
+  colorVersion,
+}: ButtonProps) {
   return (
-    <Link href={link} className={`button ${secondClassName}`}>
+    <Link
+      className={`button ${marginTopVersion} ${mobileVersion} ${centerVersion} ${colorVersion}`}
+      href={link}
+    >
       {text}
     </Link>
   );

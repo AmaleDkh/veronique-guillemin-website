@@ -11,72 +11,65 @@ import LastSectionWithButton from "../components/LastSectionWithButton/LastSecti
 import "../../../assets/styles/Global.scss";
 
 // Custom hook
-import { useTextAndImageSectionData } from "@/hooks/useData";
+import { useAboutPageData } from "@/hooks/useData";
 
 function About() {
-  const {
-    aboutPageFirstPartContent,
-    aboutPageSecondPartContent,
-    aboutPageThirdPartContent,
-    aboutPageFourthPartContent,
-    aboutPageFifthPartContent,
-  } = useTextAndImageSectionData();
+  const aboutPageContent = useAboutPageData();
 
   return (
     <Layout>
-      <PageIntroduction
-        title="Lorem ipsum dolor sit amet consectetur adipiscing elit."
-        introduction="Lorem ipsum dolor sit amet consectetur adipiscing elit."
-      />
+      {aboutPageContent?.[0] && (
+        <>
+          <PageIntroduction
+            title={aboutPageContent[0].aboutpage_title}
+            introduction="Lorem ipsum dolor sit amet consectetur adipiscing elit."
+          />
 
-      {aboutPageFirstPartContent && (
-        <ImageAndTextSection
-          title={aboutPageFirstPartContent.section_title}
-          paragraph={aboutPageFirstPartContent.section_paragraph}
-          image={aboutPageFirstPartContent.section_image}
-          marginVersion="no-margin-left"
-        />
+          <ImageAndTextSection
+            sectionTitle={aboutPageContent[0].first_section_title}
+            description={aboutPageContent[0].first_section_paragraph}
+            imageSrc={aboutPageContent[0].first_section_image}
+            imageAlt=""
+          />
+
+          <ImageAndTextSection
+            sectionTitle={aboutPageContent[0].second_section_title}
+            description={aboutPageContent[0].second_section_paragraph}
+            imageSrc={aboutPageContent[0].second_section_image}
+            imageAlt=""
+            imageOnLeft={true}
+            backgroundColor="dark-blue"
+            titleColorVersion="white"
+          />
+
+          <BackgroundColorSection
+            title={aboutPageContent[0].third_section_title}
+            text={aboutPageContent[0].third_section_paragraph}
+          />
+
+          <ImageAndTextSection
+            sectionTitle={aboutPageContent[0].fourth_section_title}
+            description={aboutPageContent[0].fourth_section_paragraph}
+            imageSrc={aboutPageContent[0].fourth_section_image}
+            imageAlt=""
+          />
+
+          <ImageAndTextSection
+            sectionTitle={aboutPageContent[0].fifth_section_title}
+            description={aboutPageContent[0].fifth_section_paragraph}
+            imageSrc={aboutPageContent[0].fifth_section_image}
+            imageAlt=""
+            imageOnLeft={true}
+            backgroundColor="dark-blue"
+            titleColorVersion="white"
+          />
+
+          <LastSectionWithButton
+            title={aboutPageContent[0].last_section_button_title}
+            description={aboutPageContent[0].last_section_button_introduction}
+          />
+        </>
       )}
-
-      {aboutPageSecondPartContent && (
-        <ImageAndTextSection
-          title={aboutPageSecondPartContent.section_title}
-          paragraph={aboutPageSecondPartContent.section_paragraph}
-          image={aboutPageSecondPartContent.section_image}
-          marginVersion="no-margin-right"
-        />
-      )}
-
-      {aboutPageThirdPartContent && (
-        <BackgroundColorSection
-          title={aboutPageThirdPartContent.section_title}
-          text={aboutPageThirdPartContent.section_paragraph}
-        />
-      )}
-
-      {aboutPageFourthPartContent && (
-        <ImageAndTextSection
-          title={aboutPageFourthPartContent.section_title}
-          paragraph={aboutPageFourthPartContent.section_paragraph}
-          image={aboutPageFourthPartContent.section_image}
-          marginVersion="no-margin-left"
-        />
-      )}
-
-      {aboutPageFifthPartContent && (
-        <ImageAndTextSection
-          title={aboutPageFifthPartContent.section_title}
-          paragraph={aboutPageFifthPartContent.section_paragraph}
-          image={aboutPageFifthPartContent.section_image}
-          marginVersion="no-margin-right"
-        />
-      )}
-
-      <LastSectionWithButton
-        title="Lorem ipsum dolor sit amet consectetur adipiscing elit."
-        paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        lastSectionWithButtonWithMarginTop=""
-      />
     </Layout>
   );
 }

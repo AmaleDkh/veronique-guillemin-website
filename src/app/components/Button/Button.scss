@@ -1,28 +1,44 @@
-@import "../../../../assets/styles/Colors.scss";
+@use "../../../../assets/styles/mixins/breakpoints.scss";
+@use "../../../../assets/styles/Colors.scss" as colors;
 
 .button {
-  height: fit-content;
-  background-color: $blue-color;
-  color: white;
-  border: none;
-  border-radius: 90px;
-  padding: 16px 24px;
   display: flex;
   width: fit-content;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: colors.$blue-color;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 0.5rem;
   transition: all 0.3s ease;
   cursor: pointer;
 
-  &__absolute-position {
-    position: absolute;
-    right: 0;
-  }
+  // &:hover {
+  //   background-color: white;
+  //   color: colors.$blue-color;
+  // }
 
-  &__margin-top {
-    margin-top: 24px;
+  &--center-version {
+    margin: auto;
   }
+}
 
-  &__center {
-    align-self: center;
+.margin-top-version {
+  margin-top: 56px;
+
+  @include breakpoints.respond-to-medium {
+    margin-top: 32px;
   }
+}
+
+.button-mobile-version {
+  @include breakpoints.respond-to-small {
+    display: none;
+  }
+}
+
+.button-with-no-margin {
+  margin: 0;
 }

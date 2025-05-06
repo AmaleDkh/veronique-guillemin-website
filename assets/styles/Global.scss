@@ -1,5 +1,5 @@
-@import "./Colors.scss";
-@import "./Fonts.scss";
+@use "./Colors.scss" as colors;
+@use "./Fonts.scss";
 
 body {
   font-family: "Lato";
@@ -18,14 +18,18 @@ h3 {
 // }
 
 h1 {
+  font-size: 64px;
   margin-bottom: 32px;
 }
 
 h2 {
   font-size: 48px;
-  color: $khaki-color;
+  color: colors.$khaki-color;
+  margin-bottom: 24px;
 }
 
 h3 {
   font-size: 32px;
+  color: colors.$ochre-color;
+  margin-bottom: 16px;
 }

@@ -1,0 +1,21 @@
+@use "../../../../assets/styles/mixins/breakpoints.scss";
+@use "../../../../assets/styles/Colors.scss" as colors;
+
+.secondary-button {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: white;
+  color: colors.$blue-color;
+  padding: 12px 24px;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid colors.$blue-color;
+
+  &__center-version {
+    margin: auto;
+  }
+}

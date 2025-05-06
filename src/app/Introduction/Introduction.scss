@@ -1,7 +1,7 @@
-@import "../../../assets/styles/Colors.scss";
+@use "../../../assets/styles/Colors.scss";
 
 .introduction {
-  color: $ochre-color;
+  color: colors.$ochre-color;
   margin: 0 104px;
   width: -webkit-fill-available;
   text-align: center;

@@ -1,9 +1,13 @@
-@import "../../../../assets/styles/Colors.scss";
+@use "../../../../assets/styles/Colors.scss";
 @import "../../../../assets/styles/Fonts.scss";
 
 .text-block {
+  background-color: colors.$ochre-color;
+  color: white;
+  padding: 40px;
+  border-radius: 4px;
+
   &__title {
-    color: $khaki-color;
-    margin-bottom: 16px;
+    color: white;
   }
 }

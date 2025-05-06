@@ -1,8 +1,8 @@
-@import "../../../../assets/styles/Colors.scss";
+@use "../../../../assets/styles/Colors.scss" as colors;
 
 .page-introduction {
-  background-color: $khaki-color;
+  background-color: colors.$khaki-color;
   color: white;
   text-align: center;
-  padding: 40px 0;
+  padding: 40px 104px 8px 104px;
 }

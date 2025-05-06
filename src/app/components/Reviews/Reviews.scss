@@ -1,15 +1,15 @@
-@import "../../../../assets/styles/Colors.scss";
-@import "../../../../assets/styles/Fonts.scss";
+@use "../../../../assets/styles/Colors.scss" as colors;
+@use "../../../../assets/styles/Fonts.scss";
 
 .reviews-section {
-  margin-top: 64px;
+  margin: 64px 104px 0 104px;
   color: white;
 
   &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $grey-color;
+    background-color: colors.$grey-color;
     padding: 40px;
 
     &__photo {
@@ -54,7 +54,6 @@
 
   &__fa-angle-left,
   &__fa-angle-right {
-    width: 24px;
-    height: 24px;
+    display: none;
   }
 }
