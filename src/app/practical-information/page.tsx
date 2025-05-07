@@ -1,6 +1,7 @@
 // Components
 import Layout from "../components/Layout/Layout";
 import PageIntroduction from "../components/PageIntroduction/PageIntroduction";
+import FrequentlyAskedQuestions from "../components/FrequentlyAskedQuestions/FrequentlyAskedQuestions";
 import LastSectionWithButton from "../components/LastSectionWithButton/LastSectionWithButton";
 
 // Style
@@ -13,6 +14,8 @@ function PracticalInformation() {
         title="Lorem ipsum dolor sit amet consectetur adipiscing elit."
         introduction="Lorem ipsum dolor sit amet consectetur adipiscing elit."
       />
+
+      <FrequentlyAskedQuestions />
 
       <LastSectionWithButton
         title="Lorem ipsum dolor sit amet consectetur adipiscing elit."

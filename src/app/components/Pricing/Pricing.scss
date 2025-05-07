@@ -1,0 +1,59 @@
+@use "../../../../assets/styles/mixins/breakpoints.scss";
+@use "../../../../assets/styles/Colors.scss" as colors;
+
+.pricing {
+  padding: 4rem 104px;
+
+  @include breakpoints.respond-to-extra-large {
+    padding: 4rem 40px;
+  }
+
+  @include breakpoints.respond-to-medium {
+    padding: 2rem 16px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @include breakpoints.respond-to-large {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoints.respond-to-medium {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(
+      135deg,
+      rgba(colors.$blue-color, 0.1) 0%,
+      rgba(colors.$ochre-color, 0.1) 100%
+    );
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+
+    h3 {
+      color: colors.$dark-khaki-color;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      font-family: "Playfair Display", serif;
+    }
+  }
+
+  &__amount {
+    font-size: 2rem;
+    color: colors.$ochre-color;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  &__duration {
+    color: colors.$khaki-color;
+    font-size: 0.875rem;
+  }
+}

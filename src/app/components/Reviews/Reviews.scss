@@ -1,59 +1,70 @@
+@use "../../../../assets/styles/mixins/breakpoints.scss";
 @use "../../../../assets/styles/Colors.scss" as colors;
-@use "../../../../assets/styles/Fonts.scss";
 
-.reviews-section {
-  margin: 64px 104px 0 104px;
-  color: white;
+.testimonials {
+  padding: 4rem 104px;
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: colors.$grey-color;
-    padding: 40px;
+  @include breakpoints.respond-to-extra-large {
+    padding: 4rem 40px;
+  }
 
-    &__photo {
-      margin-bottom: 48px;
-      width: 136px;
-      height: 136px;
-      border-radius: 50%;
-      object-fit: cover;
-      background-color: white;
-    }
+  @include breakpoints.respond-to-medium {
+    padding: 2rem 16px;
+  }
 
-    &__texts {
-      text-align: center;
+  &__title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: colors.$dark-khaki-color;
+    margin-bottom: 3rem;
+    font-family: "Playfair Display", serif;
 
-      &__name {
-        font-family: "Playfair Display";
-        color: white;
-      }
-
-      &__review {
-        position: relative;
-        &__sentence {
-          font-style: italic;
-
-          &__right-quotation-mark,
-          &__left-quotation-mark {
-            font-family: "Playfair Display";
-            font-size: 48px;
-          }
-
-          &__right-quotation-mark {
-            margin-right: 32px;
-          }
-
-          &__left-quotation-mark {
-            margin-left: 32px;
-          }
-        }
-      }
+    @include breakpoints.respond-to-medium {
+      font-size: 2rem;
+      margin-bottom: 2rem;
     }
   }
 
-  &__fa-angle-left,
-  &__fa-angle-right {
-    display: none;
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @include breakpoints.respond-to-small {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    background-color: colors.$khaki-color;
+    color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    // &:hover {
+    //   transform: translateY(-4px);
+    // }
+  }
+
+  &__content {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+
+  &__footer {
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+  }
+
+  &__name {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  &__date {
+    font-size: 0.875rem;
   }
 }

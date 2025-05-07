@@ -3,6 +3,7 @@
 // Components
 import Layout from "../components/Layout/Layout";
 import PageIntroduction from "../components/PageIntroduction/PageIntroduction";
+import FrequentlyAskedQuestions from "../components/FrequentlyAskedQuestions/FrequentlyAskedQuestions";
 import ContactContent from "../components/ContactContent/ContactContent";
 
 // Style
@@ -24,6 +25,8 @@ function Contact() {
           />
 
           <ContactContent />
+
+          <FrequentlyAskedQuestions />
         </>
       )}
     </Layout>

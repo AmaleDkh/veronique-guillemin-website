@@ -1,8 +1,18 @@
+@use "../../../../assets/styles/mixins/breakpoints.scss";
 @use "../../../../assets/styles/Colors.scss" as colors;
 
 .page-introduction {
   background-color: colors.$khaki-color;
   color: white;
   text-align: center;
-  padding: 40px 104px 8px 104px;
+
+  padding: 4rem 104px;
+
+  @include breakpoints.respond-to-extra-large {
+    padding: 4rem 40px;
+  }
+
+  @include breakpoints.respond-to-medium {
+    padding: 2rem 16px;
+  }
 }

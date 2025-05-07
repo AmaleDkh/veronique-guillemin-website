@@ -1,51 +1,74 @@
-// Next element
-import Image from "next/image";
+// Component
+import SectionTitle from "../SectionTitle/SectionTitle";
 
 // Style
 import "./Reviews.scss";
 
-// Font Awesome icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+// interface Testimonial {
+//   name: string;
+//   content: string;
+//   date: string;
+// }
 
-// Image
-import Desert1 from "../../../../assets/images/Desert1.webp";
+// interface TestimonialsProps {
+//   testimonials: Testimonial[];
+// }
 
 function Reviews() {
   return (
-    <section className="reviews-section">
-      <FontAwesomeIcon
-        icon={faAngleLeft}
-        className="reviews-section__fa-angle-left"
-      />
-      <div className="reviews-section__content">
-        <Image
-          src={Desert1}
-          alt="Rédacteur de l'avis"
-          className="reviews-section__content__photo"
-        />
-        <div className="reviews-section__content__texts">
-          <p className="reviews-section__content__texts__name">Lorem ipsum</p>
-          <div className="reviews-section__content__texts__review">
-            <p className="reviews-section__content__texts__review__sentence">
-              <span className="reviews-section__content__texts__review__sentence__right-quotation-mark">
-                “
-              </span>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-              condimentum nisi metus, ut mattis ante ultrices at. Ut mattis,
-              erat.
-              <span className="reviews-section__content__texts__review__sentence__left-quotation-mark">
-                ”
-              </span>
+    <section className="testimonials">
+      <div className="testimonials__container">
+        <SectionTitle title="Lorem ipsum" textAlignVersion="center" />
+        <div className="testimonials__grid">
+          <div className="testimonials__card">
+            <p className="testimonials__content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+              quis tortor ultricies, ultrices arcu at, placerat quam. Vivamus
+              venenatis interdum interdum.{" "}
             </p>
+            <div className="testimonials__footer">
+              <p className="testimonials__name">Lorem ipsum</p>
+              <p className="testimonials__date">Lorem ipsum</p>
+            </div>
+          </div>
+
+          <div className="testimonials__card">
+            <p className="testimonials__content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+              quis tortor ultricies, ultrices arcu at, placerat quam. Vivamus
+              venenatis interdum interdum.{" "}
+            </p>
+            <div className="testimonials__footer">
+              <p className="testimonials__name">Lorem ipsum</p>
+              <p className="testimonials__date">Lorem ipsum</p>
+            </div>
+          </div>
+
+          <div className="testimonials__card">
+            <p className="testimonials__content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+              quis tortor ultricies, ultrices arcu at, placerat quam. Vivamus
+              venenatis interdum interdum.{" "}
+            </p>
+            <div className="testimonials__footer">
+              <p className="testimonials__name">Lorem ipsum</p>
+              <p className="testimonials__date">Lorem ipsum</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <FontAwesomeIcon
-        icon={faAngleRight}
-        className="reviews-section__fa-angle-right"
-      />
+        {/* <div className="testimonials__grid">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="testimonials__card">
+              <p className="testimonials__content">{testimonial.content}</p>
+              <div className="testimonials__footer">
+                <p className="testimonials__name">{testimonial.name}</p>
+                <p className="testimonials__date">{testimonial.date}</p>
+              </div>
+            </div>
+          ))}
+        </div> */}
+      </div>
     </section>
   );
 }

@@ -1,0 +1,76 @@
+@use "../../../../assets/styles/mixins/breakpoints.scss";
+@use "../../../../assets/styles/Colors.scss" as colors;
+@use "../../../../assets/styles/Fonts.scss";
+
+.faq {
+  // background-color: #f8f9fa;
+  padding: 4rem 104px;
+
+  @include breakpoints.respond-to-extra-large {
+    padding: 4rem 40px;
+  }
+
+  @include breakpoints.respond-to-medium {
+    padding: 2rem 16px;
+  }
+
+  &__list {
+    max-width: 48rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__item {
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    &--open {
+      .faq__answer {
+        max-height: 500px;
+        padding: 1.5rem;
+      }
+    }
+  }
+
+  &__question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background: none;
+    border: none;
+    text-align: left;
+    // color: colors.$dark-khaki-color;
+    // font-size: 1.125rem;
+    // font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    // font-size: 16px;
+    font-family: "Lato";
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.02);
+    }
+  }
+
+  &__icon {
+    color: colors.$blue-color;
+    width: 1.25rem;
+    height: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  &__answer {
+    max-height: 0;
+    padding: 0 1.5rem;
+    overflow: hidden;
+    color: colors.$khaki-color;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+  }
+}
