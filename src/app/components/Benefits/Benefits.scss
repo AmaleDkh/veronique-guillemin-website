@@ -1,0 +1,85 @@
+@use "../../../../assets/styles/mixins/breakpoints.scss" as breakpoints;
+@use "../../../../assets/styles/Colors.scss" as colors;
+
+.benefits {
+  background: linear-gradient(
+    135deg,
+    rgba(colors.$ochre-color, 0.1) 0%,
+    rgba(colors.$blue-color, 0.1) 100%
+  );
+  padding: 4rem 104px;
+
+  @include breakpoints.respond-to-extra-large {
+    padding: 4rem 40px;
+  }
+
+  @include breakpoints.respond-to-medium {
+    padding: 2rem 16px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+
+    @include breakpoints.respond-to-large {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoints.respond-to-medium {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+
+    // &:hover {
+    //   transform: translateY(-4px);
+
+    //   .benefits__icon-wrapper {
+    //     background-color: colors.$ochre-color;
+
+    //     .benefits__icon {
+    //       color: white;
+    //       transform: scale(1.1);
+    //     }
+    //   }
+    // }
+  }
+
+  &__icon-wrapper {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: rgba(colors.$ochre-color, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: background-color 0.3s ease;
+  }
+
+  &__icon {
+    color: colors.$ochre-color;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  &__card-title {
+    font-size: 1.5rem;
+    color: colors.$dark-khaki-color;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    line-height: 1.6;
+  }
+}

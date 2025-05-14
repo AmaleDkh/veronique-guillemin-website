@@ -7,7 +7,7 @@ import LastSectionWithButton from "../components/LastSectionWithButton/LastSecti
 // Style
 import "../../../assets/styles/Global.scss";
 
-function PracticalInformation() {
+function PracticalInformationPage() {
   return (
     <Layout>
       <PageIntroduction
@@ -25,4 +25,4 @@ function PracticalInformation() {
   );
 }
 
-export default PracticalInformation;
+export default PracticalInformationPage;

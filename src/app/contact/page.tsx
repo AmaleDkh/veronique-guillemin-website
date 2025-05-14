@@ -12,7 +12,7 @@ import "../../../assets/styles/Global.scss";
 // Custom hook
 import { useContactPageData } from "@/hooks/useData";
 
-function Contact() {
+function ContactPage() {
   const contactPageContent = useContactPageData();
 
   return (
@@ -33,4 +33,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default ContactPage;

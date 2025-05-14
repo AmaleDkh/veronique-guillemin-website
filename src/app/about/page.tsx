@@ -5,6 +5,8 @@ import Layout from "../components/Layout/Layout";
 import PageIntroduction from "../components/PageIntroduction/PageIntroduction";
 import ImageAndTextSection from "../components/ImageAndTextSection/ImageAndTextSection";
 import BackgroundColorSection from "../components/BackgroundColorSection/BackgroundColorSection";
+import Reviews from "../components/Reviews/Reviews";
+import ApproachesSummary from "../components/ApproachesSummary/ApproachesSummary";
 import LastSectionWithButton from "../components/LastSectionWithButton/LastSectionWithButton";
 
 // Style
@@ -13,7 +15,7 @@ import "../../../assets/styles/Global.scss";
 // Custom hook
 import { useAboutPageData } from "@/hooks/useData";
 
-function About() {
+function AboutPage() {
   const aboutPageContent = useAboutPageData();
 
   return (
@@ -64,6 +66,10 @@ function About() {
             titleColorVersion="white"
           />
 
+          <Reviews />
+
+          <ApproachesSummary />
+
           <LastSectionWithButton
             title={aboutPageContent[0].last_section_button_title}
             description={aboutPageContent[0].last_section_button_introduction}
@@ -74,4 +80,4 @@ function About() {
   );
 }
 
-export default About;
+export default AboutPage;

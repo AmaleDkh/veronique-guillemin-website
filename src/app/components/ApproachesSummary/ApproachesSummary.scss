@@ -1,0 +1,62 @@
+@use "../../../../assets/styles/mixins/breakpoints.scss" as breakpoints;
+@use "../../../../assets/styles/Colors.scss" as colors;
+
+.approaches-summary {
+  background-color: white;
+  padding: 4rem 104px;
+
+  @include breakpoints.respond-to-extra-large {
+    padding: 4rem 40px;
+  }
+
+  @include breakpoints.respond-to-medium {
+    padding: 2rem 16px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+
+    @include breakpoints.respond-to-large {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoints.respond-to-medium {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+  }
+
+  &__image-wrapper {
+    height: 200px;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  &__card-title {
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-size: 1.5rem;
+    color: colors.$dark-khaki-color;
+  }
+
+  &__description {
+    padding: 0 1.5rem 1.5rem;
+    line-height: 1.6;
+  }
+}

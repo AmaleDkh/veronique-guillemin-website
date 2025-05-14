@@ -33,7 +33,7 @@ function HeroBanner({ backgroundImage, title, description }: HeroBannerProps) {
 
           <div className="hero-banner__buttons">
             <Button
-              text="Prendre rendez-vouss"
+              text="Prendre rendez-vous"
               link=""
               marginTopVersion=""
               mobileVersion=""
@@ -42,7 +42,7 @@ function HeroBanner({ backgroundImage, title, description }: HeroBannerProps) {
             />
 
             <SecondaryButton
-              link=""
+              link="/therapeutic-approaches"
               label="Découvrir les approches"
               centerVersion=""
             />

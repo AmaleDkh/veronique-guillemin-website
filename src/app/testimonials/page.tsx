@@ -6,7 +6,7 @@ import LastSectionWithButton from "../components/LastSectionWithButton/LastSecti
 // Style
 import "../../../assets/styles/Global.scss";
 
-function Testimonials() {
+function TestimonialsPage() {
   return (
     <Layout>
       <PageIntroduction
@@ -22,4 +22,4 @@ function Testimonials() {
   );
 }
 
-export default Testimonials;
+export default TestimonialsPage;

@@ -3,12 +3,15 @@
 // Components
 import Layout from "./components/Layout/Layout";
 import HeroBanner from "./components/HeroBanner/HeroBanner";
+import ThreeKeyFigures from "./components/ThreeKeyFigures/ThreeKeyFigures";
 import BackgroundColorSection from "./components/BackgroundColorSection/BackgroundColorSection";
 import ImageAndTextSection from "./components/ImageAndTextSection/ImageAndTextSection";
 import Reviews from "./components/Reviews/Reviews";
 // import TextBlocksSection from "./components/TextBlocksSection/TextBlocksSection";s
 // import Introduction from "./Introduction/Introduction";
-import ThreeKeyFigures from "./components/ThreeKeyFigures/ThreeKeyFigures";
+import Benefits from "./components/Benefits/Benefits";
+import ApproachesSummary from "./components/ApproachesSummary/ApproachesSummary";
+
 import LastSectionWithButton from "./components/LastSectionWithButton/LastSectionWithButton";
 
 // Style
@@ -20,7 +23,7 @@ import Desert2 from "../../assets/images/Desert2.webp";
 // Custom hook
 import { useHomepageData } from "@/hooks/useData";
 
-export default function Home() {
+export default function HomePage() {
   const homepageContent = useHomepageData();
 
   return (
@@ -46,6 +49,8 @@ export default function Home() {
               imageOnLeft={true}
               button={true}
             />
+
+            <Benefits />
 
             {/* <TextBlocksSection
               title={homepageContent[0].values_section_title}
@@ -80,13 +85,15 @@ export default function Home() {
               a sem."
             />
 
-            <ImageAndTextSection
+            {/* <ImageAndTextSection
               sectionTitle={homepageContent[0].benefits_section_title}
               description={homepageContent[0].benefits_section_paragraph}
               imageSrc=""
               imageAlt=""
               imageOnLeft={true}
-            />
+            /> */}
+
+            <ApproachesSummary />
 
             <Reviews />
 
