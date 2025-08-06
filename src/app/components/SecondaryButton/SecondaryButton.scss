@@ -1,20 +1,9 @@
 @use "../../../../assets/styles/Colors.scss" as colors;
 
 .secondary-button {
-  display: flex;
-  width: fit-content;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 500;
-  text-decoration: none;
-  background-color: white;
-  color: colors.$blue-color;
-  padding: 12px 24px;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
-  border: 1px solid colors.$blue-color;
-
-  &--center-version {
-    margin: auto;
-  }
+  border: 1px solid colors.$dark-blue-color;
+  color: colors.$dark-blue-color;
+  padding: 16px 12px;
+  font-weight: var(--weight-medium);
+  align-self: flex-end;
 }

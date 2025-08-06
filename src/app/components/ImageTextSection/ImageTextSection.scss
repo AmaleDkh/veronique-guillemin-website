@@ -1,0 +1,62 @@
+@use "../../../../assets/styles/mixins/breakpoints.scss" as breakpoints;
+@use "../../../../assets/styles/Colors.scss" as colors;
+
+.image-text-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  @include breakpoints.respond-to-large {
+    flex-direction: column-reverse;
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+    }
+  }
+
+  &__image-container {
+    flex-shrink: 0;
+  }
+
+  &__image {
+    object-fit: cover;
+    background-color: black;
+    width: 600px;
+    height: 800px;
+    border: 8px solid colors.$light-green-color;
+
+    @include breakpoints.respond-to-extra-extra-large {
+      width: 400px;
+      height: 600px;
+    }
+
+    @include breakpoints.respond-to-large {
+      width: 100%;
+    }
+
+    &--square {
+      width: 400px;
+      height: 600px;
+    }
+
+    &--rectangle {
+      width: 400px;
+      height: 600px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+
+    &__text {
+      width: 75%;
+    }
+  }
+}

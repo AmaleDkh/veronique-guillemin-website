@@ -1,0 +1,102 @@
+@use "../../../../assets/styles/mixins/breakpoints.scss";
+@use "../../../../assets/styles/Colors.scss" as colors;
+
+.commitment {
+  background-color: colors.$light-ochre-color;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
+
+    @include breakpoints.respond-to-large {
+      width: 75%;
+      margin: auto;
+    }
+
+    @include breakpoints.respond-to-medium {
+      width: 75%;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    @include breakpoints.respond-to-large {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      flex: 1;
+
+      &__description {
+        margin: 0;
+        width: 50%;
+      }
+    }
+
+    &__decoration {
+      width: 200px;
+      height: 2px;
+
+      background-color: colors.$light-green-color;
+      flex-shrink: 0;
+
+      @include breakpoints.respond-to-extra-large {
+        width: 150px;
+        height: 150px;
+      }
+
+      @include breakpoints.respond-to-large {
+        width: 100px;
+        height: 100px;
+      }
+
+      @include breakpoints.respond-to-medium {
+        display: none;
+      }
+    }
+  }
+
+  &__grid {
+    display: flex;
+    gap: 80px;
+
+    @include breakpoints.respond-to-large {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &__column {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      flex: 1;
+
+      @include breakpoints.respond-to-small {
+        gap: 24px;
+      }
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        flex: 1;
+
+        &__title {
+          font-family: var(--font-title);
+          font-size: 24px;
+          // color: colors.$dark-blue-color;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

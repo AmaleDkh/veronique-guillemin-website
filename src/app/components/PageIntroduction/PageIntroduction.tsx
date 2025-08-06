@@ -3,7 +3,7 @@ import "./PageIntroduction.scss";
 
 interface MyComponentProps {
   title: string;
-  introduction: string;
+  introduction?: string;
 }
 
 function PageIntroduction({ title, introduction }: MyComponentProps) {

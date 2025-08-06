@@ -7,23 +7,15 @@ import "./Button.scss";
 interface ButtonProps {
   text: string;
   link: string;
-  marginTopVersion: string;
-  mobileVersion: string;
-  centerVersion: string;
-  colorVersion: string;
+  marginTopVersion?: boolean;
 }
 
-function Button({
-  text,
-  link,
-  marginTopVersion,
-  mobileVersion,
-  centerVersion,
-  colorVersion,
-}: ButtonProps) {
+function Button({ link, text, marginTopVersion = false }: ButtonProps) {
   return (
     <Link
-      className={`button ${marginTopVersion} ${mobileVersion} ${centerVersion} ${colorVersion}`}
+      className={`button ${
+        marginTopVersion === true ? "button--margin-top-version" : ""
+      }`}
       href={link}
     >
       {text}
@@ -32,3 +24,32 @@ function Button({
 }
 
 export default Button;
+
+// interface ButtonProps {
+//   text: string;
+//   link: string;
+//   marginTopVersion: string;
+//   mobileVersion: string;
+//   centerVersion: string;
+//   colorVersion: string;
+// }
+
+// function Button({
+//   text,
+//   link,
+//   marginTopVersion,
+//   mobileVersion,
+//   centerVersion,
+//   colorVersion,
+// }: ButtonProps) {
+//   return (
+//     <Link
+//       className={`button ${marginTopVersion} ${mobileVersion} ${centerVersion} ${colorVersion}`}
+//       href={link}
+//     >
+//       {text}
+//     </Link>
+//   );
+// }
+
+// export default Button;

@@ -1,110 +1,297 @@
 @use "../../../../assets/styles/mixins/breakpoints.scss";
 @use "../../../../assets/styles/Colors.scss" as colors;
 
-.approaches {
-  // background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-  padding: 4rem 104px;
+.therapeutic-approaches-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  background-color: colors.$light-blue-color;
 
-  @include breakpoints.respond-to-extra-large {
-    padding: 4rem 40px;
-  }
-
-  @include breakpoints.respond-to-medium {
-    padding: 2rem 16px;
-  }
-
-  &__intro {
-    text-align: center;
-    max-width: 48rem;
-    margin: 0 auto 4rem;
-
-    &-text {
-      line-height: 1.6;
-    }
-  }
-
-  &__grid {
-    display: grid;
-    gap: 3rem;
-  }
-
-  &__card {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 2rem;
-    background-color: white;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-
-    // &:hover {
-    //   transform: translateY(-4px);
-    // }
-
-    @include breakpoints.respond-to-large {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  &__image-container {
-    height: 400px;
-    overflow: hidden;
-
-    @include breakpoints.respond-to-large {
-      height: 300px;
-    }
-  }
-
-  &__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+  @include breakpoints.respond-to-large {
+    align-items: start;
   }
 
   &__content {
-    padding: 2rem;
-  }
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 
-  &__card-title {
-    color: colors.$dark-khaki-color;
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-    font-family: "Playfair Display", serif;
-  }
+    // @media (max-width: 1200px) {
+    //   padding: 4rem 6rem;
+    //   gap: 2.5rem;
+    // }
 
-  &__description {
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-  }
+    // @media (max-width: 992px) {
+    //   padding: 3rem 3rem;
+    //   gap: 2rem;
+    // }
 
-  &__benefits {
-    margin-bottom: 1.5rem;
+    // @media (max-width: 768px) {
+    //   padding: 2.5rem 1.5rem;
+    //   gap: 1.5rem;
+    // }
 
-    h3 {
-      color: colors.$dark-khaki-color;
-      font-size: 1.25rem;
-      margin-bottom: 1rem;
-      font-family: "Playfair Display", serif;
-    }
+    // @media (max-width: 576px) {
+    //   padding: 2rem 1rem;
+    //   gap: 1rem;
+    // }
 
-    ul {
-      list-style: none;
-      padding: 0;
+    &__row {
+      display: flex;
+      gap: 24px;
 
-      li {
-        margin-bottom: 0.5rem;
-        padding-left: 1.5rem;
-        position: relative;
+      // @media (max-width: 992px) {
+      //   flex-direction: column;
+      //   gap: 1.5rem;
+      // }
 
-        &:before {
-          content: "•";
-          color: colors.$blue-color;
-          position: absolute;
-          left: 0;
+      @include breakpoints.respond-to-large {
+        flex-direction: column;
+      }
+
+      &__card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        // background-color: colors.$ochre-color;
+        background-color: colors.$white-color;
+        padding: 40px;
+        gap: 16px;
+
+        height: -webkit-fill-available;
+        justify-content: space-between;
+
+        // @media (max-width: 768px) {
+        //   padding: 2rem;
+        // }
+
+        // @media (max-width: 576px) {
+        //   padding: 1.5rem;
+        // }
+
+        // &__title {
+        //   font-family: var(--h3-font-family);
+        //   font-size: 2rem;
+        //   line-height: 1.2;
+        //   margin-bottom: 2rem;
+
+        //   @media (max-width: 768px) {
+        //     font-size: 1.75rem;
+        //     margin-bottom: 1.5rem;
+        //   }
+
+        //   @media (max-width: 576px) {
+        //     font-size: 1.5rem;
+        //     margin-bottom: 1rem;
+        //   }
+
+        //   &--blue {
+        //     color: var(--dark-blue);
+        //   }
+
+        //   &--ochre {
+        //     color: var(--ochre);
+        //   }
+        // }
+
+        &__details {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+
+          // @media (max-width: 576px) {
+          //   gap: 1.5rem;
+          // }
+
+          &__section {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            &__title {
+              font-family: (--font-title);
+              font-size: 24px;
+            }
+
+            // &__highlight {
+            //   font-size: 1rem;
+            //   line-height: 1.2;
+            //   font-weight: 400;
+
+            //   @media (max-width: 576px) {
+            //     font-size: 0.875rem;
+            //   }
+            // }
+          }
         }
       }
     }
   }
 }
+
+// .therapeutic-approaches {
+//   // background-color: colors.$ochre-color;
+//   background-color: colors.$light-blue-color;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   // gap: 1.5rem;
+
+//   &__content {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     gap: 24px;
+//     // position: relative;
+//     // width: 100%;
+
+//     &__title {
+//       text-align: center;
+//     }
+
+//     &__grid {
+//       display: grid;
+//       grid-template-columns: repeat(3, 1fr);
+//       gap: 24px;
+
+//       // @include breakpoints.respond-to-large {
+//       //   grid-template-columns: repeat(2, 1fr);
+//       // }
+
+//       @include breakpoints.respond-to-medium {
+//         grid-template-columns: 1fr;
+//       }
+
+//       &__card {
+//         background-color: colors.$white-color;
+
+//         &__content {
+//           display: flex;
+//           flex-direction: column;
+//           align-items: flex-start;
+//           justify-content: space-between;
+//           height: 100%;
+//           padding: 24px;
+//           gap: 24px;
+
+//           &__text-section {
+//             display: flex;
+//             flex-direction: column;
+//             align-items: flex-start;
+//             gap: 16px;
+//             // width: 100%;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .approaches {
+//   // background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+//   padding: 4rem 104px;
+
+//   @include breakpoints.respond-to-extra-large {
+//     padding: 4rem 40px;
+//   }
+
+//   @include breakpoints.respond-to-medium {
+//     padding: 2rem 16px;
+//   }
+
+//   &__intro {
+//     text-align: center;
+//     max-width: 48rem;
+//     margin: 0 auto 4rem;
+
+//     &-text {
+//       line-height: 1.6;
+//     }
+//   }
+
+//   &__grid {
+//     display: grid;
+//     gap: 3rem;
+//   }
+
+//   &__card {
+//     display: grid;
+//     grid-template-columns: 1fr 2fr;
+//     gap: 2rem;
+//     background-color: white;
+//     border-radius: 1rem;
+//     overflow: hidden;
+//     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+//     transition: transform 0.3s ease;
+
+//     // &:hover {
+//     //   transform: translateY(-4px);
+//     // }
+
+//     @include breakpoints.respond-to-large {
+//       grid-template-columns: 1fr;
+//     }
+//   }
+
+//   &__image-container {
+//     height: 400px;
+//     overflow: hidden;
+
+//     @include breakpoints.respond-to-large {
+//       height: 300px;
+//     }
+//   }
+
+//   &__image {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//     transition: transform 0.3s ease;
+//   }
+
+//   &__content {
+//     padding: 2rem;
+//   }
+
+//   &__card-title {
+//     // color: colors.$dark-khaki-color;
+//     font-size: 1.75rem;
+//     margin-bottom: 1rem;
+//     font-family: "Playfair Display", serif;
+//   }
+
+//   &__description {
+//     line-height: 1.6;
+//     margin-bottom: 1.5rem;
+//   }
+
+//   &__benefits {
+//     margin-bottom: 1.5rem;
+
+//     h3 {
+//       // color: colors.$dark-khaki-color;
+//       font-size: 1.25rem;
+//       margin-bottom: 1rem;
+//       font-family: "Playfair Display", serif;
+//     }
+
+//     ul {
+//       list-style: none;
+//       padding: 0;
+
+//       li {
+//         margin-bottom: 0.5rem;
+//         padding-left: 1.5rem;
+//         position: relative;
+
+//         &:before {
+//           content: "•";
+//           color: colors.$blue-color;
+//           position: absolute;
+//           left: 0;
+//         }
+//       }
+//     }
+//   }
+// }

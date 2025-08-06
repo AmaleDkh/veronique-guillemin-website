@@ -2,43 +2,24 @@
 @use "../../../../assets/styles/Colors.scss" as colors;
 
 .button {
-  display: flex;
-  width: fit-content;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 500;
-  text-decoration: none;
+  // background-color: colors.$dark-blue-color;
+  // color: colors.$white-color;
   background-color: colors.$blue-color;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
+  color: colors.$black-color;
+  padding: 16px 12px;
+  font-weight: var(--weight-medium);
 
-  // &:hover {
-  //   background-color: white;
-  //   color: colors.$blue-color;
-  // }
+  &--margin-top-version {
+    display: block;
+    width: fit-content;
+    margin: 32px auto 80px auto;
 
-  &--center-version {
-    margin: auto;
+    @include breakpoints.respond-to-extra-large {
+      margin: 32px auto 64px auto;
+    }
+
+    @include breakpoints.respond-to-medium {
+      margin: 32px auto 48px auto;
+    }
   }
-}
-
-.margin-top-version {
-  margin-top: 56px;
-
-  @include breakpoints.respond-to-medium {
-    margin-top: 32px;
-  }
-}
-
-.button-mobile-version {
-  @include breakpoints.respond-to-small {
-    display: none;
-  }
-}
-
-.button-with-no-margin {
-  margin: 0;
 }

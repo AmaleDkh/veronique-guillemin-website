@@ -1,0 +1,64 @@
+@use "../../../../assets/styles/mixins/breakpoints.scss";
+@use "../../../../assets/styles/Colors.scss" as colors;
+
+.text-only-section {
+  display: flex;
+  gap: 40px;
+
+  @include breakpoints.respond-to-large {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &--vertical {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+
+    .text-only-section__title {
+      @media (max-width: 992px) {
+        text-align: center;
+      }
+    }
+  }
+
+  &--horizontal {
+    // align-items: flex-start;
+    align-items: center;
+
+    @include breakpoints.respond-to-large {
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    .text-only-section__title {
+      flex-shrink: 0;
+    }
+
+    .text-only-section__content {
+      flex: 1;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    flex: 1;
+  }
+
+  &__content {
+    // background-color: colors.$blue-color;
+    background-color: colors.$light-blue-color;
+    padding: 40px;
+
+    @include breakpoints.respond-to-large {
+      width: 75%;
+    }
+
+    &__text {
+      white-space: pre-line;
+      margin: 0;
+      text-align: start;
+    }
+  }
+}

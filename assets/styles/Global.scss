@@ -1,35 +1,106 @@
+@use "./mixins/breakpoints.scss";
 @use "./Colors.scss" as colors;
 @use "./Fonts.scss";
 
+:root {
+  --font-title: "Playfair Display", serif;
+  --font-body: "Lato", sans-serif;
+
+  --weight-thin: 300;
+  --weight-regular: 400;
+  --weight-medium: 700;
+}
+
 body {
-  font-family: "Lato";
-  font-weight: 300;
+  font-family: var(--font-body);
+  font-weight: var(--weight-thin);
+  background-color: colors.$white-color;
 }
 
 h1,
 h2,
 h3 {
-  font-family: "Playfair Display";
-  font-weight: 400;
+  font-family: var(--font-title);
+  font-weight: var(--weight-regular);
 }
 
-// .content-below-image {
-//   margin-top: 100vh;
-// }
-
 h1 {
-  font-size: 64px;
-  margin-bottom: 32px;
+  font-size: 80px;
+  color: colors.$dark-blue-color;
+
+  @include breakpoints.respond-to-medium {
+    font-size: 56px;
+  }
 }
 
 h2 {
-  font-size: 48px;
-  color: colors.$khaki-color;
-  margin-bottom: 24px;
+  font-size: 56px;
+
+  @include breakpoints.respond-to-medium {
+    font-size: 40px;
+  }
 }
 
 h3 {
   font-size: 32px;
-  color: colors.$ochre-color;
-  margin-bottom: 16px;
+}
+
+.margin-section {
+  margin: 80px 104px;
+
+  @include breakpoints.respond-to-extra-large {
+    margin: 64px 40px;
+  }
+
+  @include breakpoints.respond-to-medium {
+    margin: 48px 16px;
+  }
+}
+
+.only-side-margin-section {
+  margin: 0 104px;
+
+  @include breakpoints.respond-to-extra-large {
+    margin: 0 40px;
+  }
+
+  @include breakpoints.respond-to-medium {
+    margin: 0 16px;
+  }
+}
+
+.only-top-margin-section {
+  margin: 80px 104px 0 104px;
+
+  @include breakpoints.respond-to-extra-large {
+    margin: 64px 40px 0 40px;
+  }
+
+  @include breakpoints.respond-to-medium {
+    margin: 48px 16px 0 16px;
+  }
+}
+
+.only-bottom-margin-section {
+  margin: 0 104px 80px 104px;
+
+  @include breakpoints.respond-to-extra-large {
+    margin: 0 40px 64px 40px;
+  }
+
+  @include breakpoints.respond-to-medium {
+    margin: 0 16px 48px 16px;
+  }
+}
+
+.padding-section {
+  padding: 80px 104px;
+
+  @include breakpoints.respond-to-extra-large {
+    padding: 64px 40px;
+  }
+
+  @include breakpoints.respond-to-medium {
+    padding: 48px 16px;
+  }
 }

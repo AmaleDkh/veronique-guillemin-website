@@ -9,6 +9,8 @@ import {
   fetchHomepageContent,
   fetchAboutPageContent,
   fetchContactPageContent,
+  fetchHomepagePageContent,
+  fetchAboutpagePageContent,
 } from "@/utils/api";
 
 type TextAndImageSection = {
@@ -16,6 +18,25 @@ type TextAndImageSection = {
   section_paragraph: string;
   section_image: string;
 };
+
+type HomeContent = {
+  TextAndImageSection: Array<{
+    id: number;
+    title: string;
+    text: string;
+    image: {
+      url: string;
+      alternativeText?: string;
+    };
+  }>;
+};
+
+interface AboutContent {
+  title: string;
+  description: string;
+  teamMembers: { name: string; role: string }[];
+  // ... selon ta structure réelle
+}
 
 type HomepageContent = {
   first_section_title: string;
@@ -210,4 +231,57 @@ export const useContactPageData = () => {
   }, []);
 
   return contactPageContent;
+};
+
+export const useHomepagePageData = () => {
+  const [homepageContent, setHomepageContent] = useState<HomeContent | null>(
+    null
+  );
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const homepagePageContentData = await fetchHomepagePageContent();
+
+        const content = homepagePageContentData.data;
+        // console.log("✅ Données récupérées :", content);
+
+        setHomepageContent(content);
+      } catch (error) {
+        console.error(
+          "Une erreur est survenue lors de la récupération de la section",
+          error
+        );
+      }
+    };
+    fetchData();
+  }, []);
+
+  return homepageContent;
+};
+
+export const useAboutpagePageData = () => {
+  const [aboutpageContent, setAboutpageContent] = useState<AboutContent | null>(
+    null
+  );
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const aboutpagePageContentData = await fetchAboutpagePageContent();
+
+        const content = aboutpagePageContentData.data;
+
+        setAboutpageContent(content);
+      } catch (error) {
+        console.error(
+          "Une erreur est survenue lors de la récupération de la section",
+          error
+        );
+      }
+    };
+    fetchData();
+  }, []);
+
+  return aboutpageContent;
 };

@@ -3,21 +3,23 @@
 // Components
 import Layout from "../components/Layout/Layout";
 import PageIntroduction from "../components/PageIntroduction/PageIntroduction";
-import FrequentlyAskedQuestions from "../components/FrequentlyAskedQuestions/FrequentlyAskedQuestions";
-import ContactContent from "../components/ContactContent/ContactContent";
+import ContactForm from "../components/ContactForm/ContactForm";
 
 // Style
 import "../../../assets/styles/Global.scss";
 
 // Custom hook
-import { useContactPageData } from "@/hooks/useData";
+// import { useContactPageData } from "@/hooks/useData";
 
 function ContactPage() {
-  const contactPageContent = useContactPageData();
+  // const contactPageContent = useContactPageData();
 
   return (
     <Layout>
-      {contactPageContent?.[0] && (
+      <PageIntroduction title="Contact" />
+
+      <ContactForm />
+      {/* {contactPageContent?.[0] && (
         <>
           <PageIntroduction
             title={contactPageContent[0].contact_page_title}
@@ -28,7 +30,7 @@ function ContactPage() {
 
           <FrequentlyAskedQuestions />
         </>
-      )}
+      )} */}
     </Layout>
   );
 }
