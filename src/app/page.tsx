@@ -10,6 +10,7 @@ import Methodology from "./components/Methodology/Methodology";
 import Testimonials from "./components/Testimonials/Testimonials";
 import CallToAction from "./components/CallToAction/CallToAction";
 import Button from "./components/Button/Button";
+import Issues from "./components/Issues/Issues";
 
 // Style
 import "../../assets/styles/Global.scss";
@@ -34,6 +35,8 @@ export default function HomePage() {
       <HeroBanner />
 
       <ThreeKeyFigures />
+
+      <Issues />
 
       <TherapeuticApproaches />
 

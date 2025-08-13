@@ -10,13 +10,13 @@ function ThreeKeyFigures() {
     },
     {
       value: "+ X",
-      title: "Années d'éxpérience",
-      description: "Dans l'accompagnement thérapeutique",
+      title: "Clients accompagnés",
+      description: "Vers le bien-être complet",
     },
     {
-      value: "+ X",
-      title: "Années d'éxpérience",
-      description: "Dans l'accompagnement thérapeutique",
+      value: "8",
+      title: "Approches thérapeutiques",
+      description: "Pour un accompagnement sur-mesure",
     },
   ];
 

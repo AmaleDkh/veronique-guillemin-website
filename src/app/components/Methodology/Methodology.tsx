@@ -28,7 +28,7 @@ function Methodology() {
 
   return (
     <section className="methodology only-top-margin-section">
-      <h2 className="methodology__title">Une démarche unique en 4 étapes</h2>
+      <h2 className="methodology__title">Une démarche unique en 3 étapes</h2>
       <div className="methodology__steps">
         {steps.map((step, index) => (
           <div key={index} className="methodology__steps__item">

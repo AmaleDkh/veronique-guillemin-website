@@ -57,10 +57,21 @@
     flex-direction: column;
     gap: 24px;
     flex: 1;
+  }
 
-    // @media (max-width: 992px) {
-    //   align-items: center;
-    //   text-align: center;
-    // }
+  &__photo {
+    background-color: black;
+    width: 600px;
+    height: 800px;
+    border: 8px solid colors.$light-green-color;
+
+    @include breakpoints.respond-to-extra-extra-large {
+      width: 400px;
+      height: 600px;
+    }
+
+    @include breakpoints.respond-to-large {
+      width: 100%;
+    }
   }
 }

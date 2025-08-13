@@ -18,7 +18,11 @@ function TextOnlySection({
     >
       <h2 className="text-only-section__title">{title}</h2>
       <div className="text-only-section__content">
-        <p className="text-only-section__content__text">{text}</p>
+        {/* <p className="text-only-section__content__text">{text}</p> */}
+        <p
+          className="text-only-section__content__text"
+          dangerouslySetInnerHTML={{ __html: text }}
+        ></p>
       </div>
     </div>
   );

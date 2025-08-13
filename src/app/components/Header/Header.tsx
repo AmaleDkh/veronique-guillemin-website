@@ -1,13 +1,25 @@
-// Next element
-import Link from "next/link";
+"use client";
 
-// Style
-import "./Header.scss";
+// React element
+import { useState } from "react";
 
 // Component
 import Button from "../Button/Button";
 
+// Style
+import "./Header.scss";
+
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   const navItems = [
     { label: "Approches thérapeutiques", href: "/therapeutic-approaches" },
     { label: "À propos", href: "/about" },
@@ -16,35 +28,136 @@ function Header() {
 
   return (
     <header className="header-section">
-      <Link href="/" className="header-section__title-section">
-        <p className="header-section__title-section__name">
-          Véronique Guillemin
-        </p>
-        <p className="header-section__title-section__profession">
-          Relaxologue-Psychopraticienne
-        </p>
-      </Link>
+      <div className="header-section__top">
+        <a href="/" className="header-section__title-section">
+          <p className="header-section__title-section__name">
+            Véronique Guillemin
+          </p>
+          <p className="header-section__title-section__profession">
+            Relaxologue-Psychopraticienne
+          </p>
+        </a>
 
-      <div className="header-section__navigation-section">
+        <button className="header__hamburger" onClick={toggleMenu}>
+          <div
+            className={`header__hamburger ${
+              isMenuOpen ? "header__hamburger--open" : ""
+            }`}
+          >
+            <span className="header__hamburger__line"></span>
+            <span className="header__hamburger__line"></span>
+            <span className="header__hamburger__line"></span>
+          </div>
+        </button>
+      </div>
+
+      <div
+        className={`header-section__navigation-section ${
+          isMenuOpen ? "header-section__navigation-section--open" : ""
+        }`}
+      >
         <nav className="header-section__navigation-section__nav-menu">
           {navItems.map((item, index) => (
             <a
               key={index}
               href={item.href}
               className="header-section__navigation-section__nav-menu__link"
+              onClick={closeMenu}
             >
               {item.label}
             </a>
           ))}
+          <Button text="Prendre rendez-vous" link="/" />
         </nav>
-
-        <Button text="Prendre rendez-vous" link="/contact" />
       </div>
     </header>
   );
 }
 
 export default Header;
+
+// // Next element
+// import Link from "next/link";
+
+// // Style
+// import "./Header.scss";
+
+// // function Header() {
+// //   const navItems = [
+// //     { label: "Approches thérapeutiques", href: "/therapeutic-approaches" },
+// //     { label: "À propos", href: "/about" },
+// //     { label: "Contact", href: "/contact" },
+// //   ];
+
+// //   return (
+// //     <header className="header-section">
+// //       <Link href="/" className="header-section__title-section">
+// //         <p className="header-section__title-section__name">
+// //           Véronique Guillemin
+// //         </p>
+// //         <p className="header-section__title-section__profession">
+// //           Relaxologue-Psychopraticienne
+// //         </p>
+// //       </Link>
+
+// //       <div className="header-section__navigation-section">
+// //         <nav className="header-section__navigation-section__nav-menu">
+// //           {navItems.map((item, index) => (
+// //             <a
+// //               key={index}
+// //               href={item.href}
+// //               className="header-section__navigation-section__nav-menu__link"
+// //             >
+// //               {item.label}
+// //             </a>
+// //           ))}
+// //         </nav>
+
+// //         <Button text="Prendre rendez-vous" link="/contact" />
+// //       </div>
+// //     </header>
+// //   );
+// // }
+
+// // export default Header;
+
+// import React from "react";
+// import "./Header.scss";
+
+// function Header() {
+//   const navItems = [
+//     { label: "Approches thérapeutiques", href: "#approches" },
+//     { label: "À propos", href: "#about" },
+//     { label: "Contact", href: "#contact" },
+//   ];
+
+//   return (
+//     <header className="header">
+//       <div className="header__title">
+//         <span className="header__title__name">Véronique Guillemin</span>
+//         <span className="header__title__profession">
+//           Relaxologue-Psychopraticienne
+//         </span>
+//       </div>
+//       <div className="header__navigation">
+//         <div className="header__navigation__menu">
+//           {navItems.map((item, index) => (
+//             <span key={index} className="header__navigation__menu__item">
+//               {item.label}
+//             </span>
+//           ))}
+//         </div>
+//         <div className="header__navigation__cta">
+//           <span className="header__navigation__cta__text">
+//             Prendre rendez-vous
+//           </span>
+//         </div>
+//       </div>
+//     </header>
+//   );
+// }
+
+// export default Header;
 
 // "use client";
 

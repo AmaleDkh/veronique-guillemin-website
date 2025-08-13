@@ -65,31 +65,37 @@ function AboutPage() {
     <Layout>
       <PageIntroduction title="À propos" />
       <ImageTextSection
-        title="Mon cheminement"
-        text="Mon parcours personnel est tissé d'épreuves, mais surtout de résilience.
-Chaque difficulté rencontrée n'a pas été un frein, mais une porte d'entrée vers une compréhension plus profonde de l'humain, de ses fonctionnements intérieurs, de ses ressources parfois insoupçonnées.
-
-Ces expériences ont tracé le fil rouge de ma vocation : accompagner celles et ceux qui souhaitent se reconnecter à leur potentiel et traverser la vie avec plus de conscience."
+        title="Un parcours marqué par la résilience"
+        text={`Mon histoire est tissée  <span class="bold-word">d’épreuves</span>, mais surtout de <span class="bold-word">transformations</span>.  
+          <br />
+          <br />
+          Chaque difficulté a été une porte d’entrée vers une <span class="bold-word">meilleure compréhension de l’humain</span>, de ses fonctionnements profonds, et de ses ressources parfois insoupçonnées.
+          <br />
+          <br />
+          Ce chemin m’a conduite à ma vocation : <span class="bold-word">accompagner celles et ceux qui souhaitent se reconnecter à leur potentiel, et traverser la vie avec plus de conscience et de justesse </span>.`}
         imageSrc=""
         imageAlt="Mon cheminement"
         imageSize="square"
       />
 
       <TextOnlySection
-        title="Mon expérience professionnelle"
-        text="Mon parcours personnel est tissé d'épreuves, mais surtout de résilience.
-Chaque difficulté rencontrée n'a pas été un frein, mais une porte d'entrée vers une compréhension plus profonde de l'humain, de ses fonctionnements intérieurs, de ses ressources parfois insoupçonnées.
-
-Ces expériences ont tracé le fil rouge de ma vocation : accompagner celles et ceux qui souhaitent se reconnecter à leur potentiel et traverser la vie avec plus de conscience."
+        title="30 ans d’écoute au cœur de l’entreprise"
+        text={`J’ai travaillé dans une multinationale : d’abord en logistique, puis pendant 18 ans au sein des instances représentatives du personnel.
+          <br />
+          <br />
+          J’y ai écouté de près les préoccupations de celles et ceux qui font vivre l’entreprise.
+          <br />
+          <br /> 
+          Cette expérience m’a permis de développer <span class="bold-word">une écoute fine, une grande sensibilité aux enjeux émotionnels et une vision claire des dynamiques humaines au travail <span class="bold-word">.`}
         layout="horizontal"
       />
 
       <ImageTextSection
-        title="Mon cheminement"
-        text="Mon parcours personnel est tissé d'épreuves, mais surtout de résilience.
-Chaque difficulté rencontrée n'a pas été un frein, mais une porte d'entrée vers une compréhension plus profonde de l'humain, de ses fonctionnements intérieurs, de ses ressources parfois insoupçonnées.
-
-Ces expériences ont tracé le fil rouge de ma vocation : accompagner celles et ceux qui souhaitent se reconnecter à leur potentiel et traverser la vie avec plus de conscience."
+        title="Une reconversion portée par le sens"
+        text={`Il y a 10 ans, j’ai choisi de mettre cette expérience <span class="bold-word">au service de l’accompagnement</span>.
+          <br />
+          <br />
+          J’ai d’abord guidé des collaborateurs, puis j’ai ouvert mon cabinet pour accueillir ceux qui souhaitent <span class="bold-word">avancer sur leur chemin de transformation</span>.`}
         imageSrc=""
         imageAlt="Mon cheminement"
         imageSize="rectangle"
@@ -97,14 +103,13 @@ Ces expériences ont tracé le fil rouge de ma vocation : accompagner celles et 
 
       <TextOnlySection
         title="Une approche globale du vivant"
-        text="En parallèle de mon activité, je poursuis un chemin personnel exigeant.
-Je me suis engagée dans un travail en profondeur à travers différentes voies thérapeutiques :
-la psychanalyse (freudienne puis lacanienne),
-la Gestalt-thérapie,
-et aujourd'hui, un accompagnement corporel enrichi par l'approche transpersonnelle et les états élargis de conscience.
-
-Ce cheminement personnel est le socle de ma posture professionnelle : authentique, enracinée, en constante évolution.
-Il me permet d'accompagner l'autre dans toutes ses dimensions : physique, émotionnelle, énergétique et spirituelle."
+        text={`Mon <span class="bold-word">engagement professionnel</span> repose sur un chemin personnel profond et toujours en mouvement.
+          <br />
+          <br />
+          Je me suis <span class="bold-word">formée</span>, et continue de le faire, à des approches complémentaires.
+          <br />
+          <br />
+          <span class="bold-word">Ce travail intérieur nourrit ma posture</span> : authentique, enracinée et à l’écoute de toutes les dimensions de l’être (physique, émotionnelle, énergétique et spirituelle).`}
         layout="horizontal"
       />
 

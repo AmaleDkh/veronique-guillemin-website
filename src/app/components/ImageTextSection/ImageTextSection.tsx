@@ -43,7 +43,11 @@ function ImageTextSection({
       </div> */}
       <div className="image-text-section__content">
         <h2 className="image-text-section__content__title">{title}</h2>
-        <p className="image-text-section__content__text">{text}</p>
+        {/* <p className="image-text-section__content__text">{text}</p> */}
+        <p
+          className="image-text-section__content__text"
+          dangerouslySetInnerHTML={{ __html: text }}
+        ></p>
       </div>
     </div>
   );
