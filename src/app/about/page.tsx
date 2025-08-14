@@ -13,9 +13,12 @@ import CallToAction from "../components/CallToAction/CallToAction";
 import "../../../assets/styles/Global.scss";
 
 // Custom hook
-// import { useAboutPageData } from "@/hooks/useData";
+import { useAboutpagePageData } from "@/hooks/useData";
 
 function AboutPage() {
+  const AboutPageData = useAboutpagePageData();
+  console.log("AboutPageData", AboutPageData);
+
   const formations = [
     {
       title: "Formation sur la Clinique des expériences extraordinaires",
@@ -65,7 +68,8 @@ function AboutPage() {
     <Layout>
       <PageIntroduction title="À propos" />
       <ImageTextSection
-        title="Un parcours marqué par la résilience"
+        // title={AboutPageData}
+        title=""
         text={`Mon histoire est tissée  <span class="bold-word">d’épreuves</span>, mais surtout de <span class="bold-word">transformations</span>.  
           <br />
           <br />
@@ -77,6 +81,20 @@ function AboutPage() {
         imageAlt="Mon cheminement"
         imageSize="square"
       />
+
+      {/* <ImageTextSection
+        title="Un parcours marqué par la résilience"
+        text={`Mon histoire est tissée  <span class="bold-word">d’épreuves</span>, mais surtout de <span class="bold-word">transformations</span>.  
+          <br />
+          <br />
+          Chaque difficulté a été une porte d’entrée vers une <span class="bold-word">meilleure compréhension de l’humain</span>, de ses fonctionnements profonds, et de ses ressources parfois insoupçonnées.
+          <br />
+          <br />
+          Ce chemin m’a conduite à ma vocation : <span class="bold-word">accompagner celles et ceux qui souhaitent se reconnecter à leur potentiel, et traverser la vie avec plus de conscience et de justesse </span>.`}
+        imageSrc=""
+        imageAlt="Mon cheminement"
+        imageSize="square"
+      /> */}
 
       <TextOnlySection
         title="30 ans d’écoute au cœur de l’entreprise"

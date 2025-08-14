@@ -12,20 +12,17 @@ function ApproachesSummary() {
     {
       title: "Thérapie Psychocorporelle",
       description: "Une approche globale unissant corps et esprit",
-      image:
-        "https://images.pexels.com/photos/3759658/pexels-photo-3759658.jpeg",
+      image: "",
     },
     {
       title: "Relaxologie",
       description: "Techniques de relaxation et gestion du stress",
-      image:
-        "https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg",
+      image: "",
     },
     {
       title: "Cohérence Cardiaque",
       description: "Harmonisation du rythme cardiaque et respiratoire",
-      image:
-        "https://images.pexels.com/photos/3760607/pexels-photo-3760607.jpeg",
+      image: "g",
     },
   ];
 
@@ -57,9 +54,8 @@ function ApproachesSummary() {
         </div>
 
         <SecondaryButton
+          text="Découvrir les approches"
           link="/therapeutic-approaches"
-          label="Découvrir les approches"
-          centerVersion="secondary-button--center-version"
         />
       </div>
     </section>

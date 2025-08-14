@@ -2,6 +2,7 @@
 
 // React element
 import { useState } from "react";
+import Link from "next/link";
 
 // Component
 import Button from "../Button/Button";
@@ -29,14 +30,14 @@ function Header() {
   return (
     <header className="header-section">
       <div className="header-section__top">
-        <a href="/" className="header-section__title-section">
+        <Link href="/" className="header-section__title-section">
           <p className="header-section__title-section__name">
             Véronique Guillemin
           </p>
           <p className="header-section__title-section__profession">
             Relaxologue-Psychopraticienne
           </p>
-        </a>
+        </Link>
 
         <button className="header__hamburger" onClick={toggleMenu}>
           <div

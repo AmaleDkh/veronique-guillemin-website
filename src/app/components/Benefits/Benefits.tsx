@@ -47,9 +47,8 @@ function Benefits() {
         </div>
 
         <SecondaryButton
+          text="Découvrir les approches"
           link="/therapeutic-approaches"
-          label="Découvrir les approches"
-          centerVersion="secondary-button--center-version"
         />
       </div>
     </section>

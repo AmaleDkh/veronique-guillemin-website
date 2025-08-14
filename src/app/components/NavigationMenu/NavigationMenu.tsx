@@ -2,7 +2,7 @@
 
 // Next & React elements
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 // Font Awesome icon
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

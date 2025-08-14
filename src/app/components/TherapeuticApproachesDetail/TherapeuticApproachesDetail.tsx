@@ -1,5 +1,5 @@
 // Component
-import Button from "../Button/Button";
+// import Button from "../Button/Button";
 
 // Style
 import "./TherapeuticApproachesDetail.scss";

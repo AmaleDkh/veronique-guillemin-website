@@ -4,7 +4,9 @@ import "./Issues.scss";
 function Issues() {
   return (
     <section className="issues only-bottom-margin-section">
-      <h2 className="issues__title">Ces freins qui vous empêchent d'avancer</h2>
+      <h2 className="issues__title">
+        Ces freins qui vous empêchent d&apos;avancer
+      </h2>
       <p className="issues__paragraph">
         <span className="bold-word">
           Stress, anxiété, peurs envahissent votre quotidien

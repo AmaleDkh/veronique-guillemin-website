@@ -6,7 +6,7 @@ interface MyComponentProps {
   introduction?: string;
 }
 
-function PageIntroduction({ title, introduction }: MyComponentProps) {
+function PageIntroduction({ title }: MyComponentProps) {
   return (
     <div className="page-introduction">
       <h1>{title}</h1>

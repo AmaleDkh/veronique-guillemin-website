@@ -16,11 +16,11 @@ interface ImageTextSectionProps {
 function ImageTextSection({
   title,
   text,
-  imageSrc,
-  imageAlt,
+  // imageSrc,
+  // imageAlt,
   reverse = false,
-  imageSize = "square",
-}: ImageTextSectionProps) {
+}: // imageSize = "square",
+ImageTextSectionProps) {
   return (
     <div
       className={`image-text-section ${

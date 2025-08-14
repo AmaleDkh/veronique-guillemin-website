@@ -27,7 +27,7 @@ function Testimonials() {
         {testimonials.map((testimonial, index) => (
           <div key={index} className="testimonials__grid__card">
             <span className="testimonials__grid__card__quote">
-              "{testimonial.quote}"
+              &quot;{testimonial.quote}&quot;
             </span>
             <span className="testimonials__grid__card__name">
               {testimonial.name}

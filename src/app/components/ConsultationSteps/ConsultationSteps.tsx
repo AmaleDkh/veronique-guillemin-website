@@ -22,7 +22,7 @@ function ConsultationSteps() {
       number: "Étape 3",
       title: "Nous trouvons votre rythme",
       description:
-        "Si nous décidons d'avancer ensemble, un rythme régulier est proposé : en général une fois par semaine au début, puis tous les 15 jours, selon vos besoins.",
+        "Si nous décidons d&apos;avancer ensemble, un rythme régulier est proposé : en général une fois par semaine au début, puis tous les 15 jours, selon vos besoins.",
     },
   ];
 
@@ -46,7 +46,7 @@ function ConsultationSteps() {
           </div> */}
           <div className="consultation-steps__info">
             <h2 className="consultation-steps__info__title">
-              Les étapes d'une consultation
+              Les étapes d&apos;une consultation
             </h2>
             <div className="consultation-steps__info__steps">
               {steps.map((step, index) => (

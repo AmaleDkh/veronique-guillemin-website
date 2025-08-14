@@ -32,14 +32,7 @@ function PresentationSection({
         <h2 className="presentation-section__texts__title">{title}</h2>
         <p>{paragraph}</p>
 
-        <Button
-          link="/"
-          text="Découvrir toutes les pratiques"
-          marginTopVersion=""
-          mobileVersion=""
-          centerVersion="button--center-version"
-          colorVersion=""
-        />
+        <Button link="/" text="Découvrir toutes les pratiques" />
       </div>
     </section>
   );

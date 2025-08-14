@@ -31,24 +31,24 @@ function WhyMe() {
           Véronique Guillemin, Relaxologue-Psychopraticienne
         </h2>
         <p className="why-me__content__description">
-          Après <span className="bold-word">30 ans en entreprise</span>, j’ai
-          découvert ma véritable vocation : <br />
-          <span className="bold-word">accompagner l’humain</span>.
+          Après <span className="bold-word">30 ans en entreprise</span>,
+          j&apos;ai découvert ma véritable vocation : <br />
+          <span className="bold-word">accompagner l&apos;humain</span>.
           <br />
           <br />
           Mon parcours personnel (psychanalyse, Gestalt, approches
-          transpersonnelles) m’a appris que{" "}
+          transpersonnelles) m&apos;a appris que{" "}
           <span className="bold-word">
             les blessures, les doutes, les blocages ne sont pas des faiblesses
           </span>
           .
           <br />
           <br />
-          Ce sont des portes d’entrée vers plus de liberté intérieure.
+          Ce sont des portes d&apos;entrée vers plus de liberté intérieure.
           <br />
           <br />
-          <span className="bold-word">Ma conviction ?</span> "Rien ne nous est
-          donné pour nous écraser" - Christiane Singer
+          <span className="bold-word">Ma conviction ?</span> &quot;Rien ne nous
+          est donné pour nous écraser&quot; - Christiane Singer
           <br />
           <br />
           <span className="bold-word">Mais pour nous révéler.</span>

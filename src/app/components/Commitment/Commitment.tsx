@@ -34,8 +34,8 @@ function Commitment() {
               Mon engagement déontologique
             </h2>
             <p className="commitment__header__content__description">
-              Je m'engage à exercer dans le respect d'un cadre éthique clair,
-              fondé sur la bienveillance, la responsabilité et la
+              Je m&apos;engage à exercer dans le respect d&apos;un cadre éthique
+              clair, fondé sur la bienveillance, la responsabilité et la
               confidentialité. Mon accompagnement repose sur les principes
               suivants :
             </p>

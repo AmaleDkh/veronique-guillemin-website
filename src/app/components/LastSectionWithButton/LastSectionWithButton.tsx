@@ -35,14 +35,7 @@ function LastSectionWithButton({
         <SectionTitle title={title} />
         <p className="last-section-with-button__description">{description}</p>
 
-        <Button
-          text="Prendre rendez-vous"
-          link="/contact"
-          marginTopVersion=""
-          mobileVersion=""
-          centerVersion="button--center-version"
-          colorVersion=""
-        />
+        <Button text="Prendre rendez-vous" link="/contact" />
       </div>
     </section>
   );

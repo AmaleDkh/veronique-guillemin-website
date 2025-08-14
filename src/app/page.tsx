@@ -19,7 +19,7 @@ import "../../assets/styles/Global.scss";
 // import Desert2 from "../../assets/images/Desert2.webp";
 
 // Custom hook
-// import { useHomepageData, useHomepagePageData } from "@/hooks/useData";
+// import { useHomepageData } from "@/hooks/useData";
 
 export default function HomePage() {
   // const homepagePageContent = useHomepagePageData();
