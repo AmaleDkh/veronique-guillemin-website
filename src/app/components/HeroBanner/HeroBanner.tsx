@@ -9,6 +9,8 @@ import Button from "../Button/Button";
 // Style
 import "./HeroBanner.scss";
 
+import PhotoVG from "../../../../assets/images/PhotoVG.jpg";
+
 function HeroBanner() {
   return (
     <section className="hero-section margin-section">
@@ -42,7 +44,7 @@ function HeroBanner() {
       <Image
         className="hero-section__image-section__image"
         alt="Portrait professionnel"
-        src="/image---2025-03-10t100146-793-1.png"
+        src={PhotoVG}
         width={600}
         height={800}
       />
